@@ -4,6 +4,8 @@
  "scheduled_for": "2026-10-12T17:00:00+03:30",
  "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/4c825013716fe28793a7bd506facf259ae8389d1/posts/2026-10-12-pansman-sukhtegi/final.jpg",
  "review": "passed (attempt 2; attempt 1 rejected: garbled text on dressing pack)",
- "result": "pending",
- "note": "media updated with logo; id changed from 393960538"
+ "result": "PUBLISHED",
+ "note": "media updated with logo; id changed from 393960538",
+ "instagram_url": "https://www.instagram.com/p/DeZWHKtCgK7/",
+ "checked_at": "2026-10-12T17:12:00+03:30"
 }
