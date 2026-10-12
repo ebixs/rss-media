@@ -124,14 +124,14 @@ def brand_mark(img: Image.Image, draw: ImageDraw.ImageDraw) -> None:
     y = 64
     if LOGO.is_file():
         logo = Image.open(LOGO).convert("RGBA")
-        size = 92
+        size = 120
         logo.thumbnail((size, size), Image.LANCZOS)
         mask = Image.new("L", logo.size, 0)
         ImageDraw.Draw(mask).ellipse((0, 0, *logo.size), fill=255)
-        img.paste(logo, (x_right - logo.width, y - 10), mask)
+        img.paste(logo, (x_right - logo.width, y - 22), mask)
         x_right -= logo.width + 20
-    rtl(draw, (x_right, y), BRAND_FA, font("Bold", 34), IVORY)
-    rtl(draw, (x_right, y + 50), "خدمات پرستاری و پزشکی در منزل", font("Medium", 24), MINT)
+    rtl(draw, (x_right, y + 2), BRAND_FA, font("Bold", 34), IVORY)
+    rtl(draw, (x_right, y + 52), "خدمات پرستاری و پزشکی در منزل", font("Medium", 24), MINT)
 
 
 def compose(post_dir: pathlib.Path) -> pathlib.Path:
@@ -203,7 +203,7 @@ def main() -> int:
     if len(sys.argv) != 2:
         print(__doc__)
         return 2
-    out = compose(pathlib.Path(sys.argv[1]))
+    out = compose(pathlib.Path(sys.argv[1]).resolve())
     print(f"wrote {out.relative_to(ROOT)}")
     return 0
 
