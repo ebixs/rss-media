@@ -5,7 +5,7 @@ goal: معرفی خدمت + ذخیره و اشتراک‌گذاری
 service: پانسمان سوختگی
 headline: پانسمان سوختگی در منزل
 subline: سه اشتباه رایج که مراقبت از سوختگی را سخت‌تر می‌کند
-image_prompt: Close-up of a professional Iranian female nurse in a navy medical uniform and blue disposable gloves gently wrapping a clean white sterile non-adhesive dressing around a patient's forearm at home, the arm resting on a folded white towel on a light oak table, sealed sterile dressing packs and a small saline bottle neatly arranged beside, no visible wound, calm and reassuring, hands and forearm sharply in focus in the upper half of the frame, soft window light from the left
+image_prompt: Close-up of a professional Iranian female nurse in a navy medical uniform and blue disposable gloves gently wrapping a clean white sterile non-adhesive dressing around a patient's forearm at home, the arm resting on a folded white towel on a light oak table, nothing else on the table, no packaging, no labels, no visible wound, calm and reassuring, hands and forearm sharply in focus in the upper half of the frame, soft window light from the left
 ---
 سوختگی کوچک هم مراقبت درست می‌خواهد 🩹
 
