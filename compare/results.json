@@ -1,0 +1,22 @@
+{
+  "lucid-origin": {
+    "ok": true,
+    "seconds": 6.5,
+    "bytes": 448460
+  },
+  "flux-2-klein-9b": {
+    "ok": true,
+    "seconds": 3.2,
+    "bytes": 582503
+  },
+  "phoenix": {
+    "ok": true,
+    "seconds": 5.3,
+    "bytes": 573018
+  },
+  "flux-1-schnell": {
+    "ok": true,
+    "seconds": 2.4,
+    "bytes": 594687
+  }
+}
