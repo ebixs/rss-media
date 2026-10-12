@@ -122,6 +122,16 @@ def top_scrim(img: Image.Image) -> Image.Image:
 def brand_mark(img: Image.Image, draw: ImageDraw.ImageDraw) -> None:
     x_right = W - MARGIN
     y = 64
+    # Soft navy glass panel behind the header so it reads on bright windows too.
+    name_f, tag_f = font("Bold", 34), font("Medium", 24)
+    text_w = max(width(draw, BRAND_FA, name_f), width(draw, "خدمات پرستاری و پزشکی در منزل", tag_f))
+    logo_w = 140 if LOGO.is_file() else 0
+    panel = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(panel).rounded_rectangle(
+        (x_right - logo_w - text_w - 36, y - 30, W - MARGIN + 18, y + 110),
+        radius=34, fill=(*NAVY, 150),
+    )
+    img.alpha_composite(panel)
     if LOGO.is_file():
         logo = Image.open(LOGO).convert("RGBA")
         size = 120
@@ -134,7 +144,7 @@ def brand_mark(img: Image.Image, draw: ImageDraw.ImageDraw) -> None:
     rtl(draw, (x_right, y + 52), "خدمات پرستاری و پزشکی در منزل", font("Medium", 24), MINT)
 
 
-def compose(post_dir: pathlib.Path) -> pathlib.Path:
+def compose(post_dir: pathlib.Path, bg_name: str = "background.jpg", out_name: str = "final.jpg") -> pathlib.Path:
     meta = read_header(post_dir / "post.md")
     headline = meta.get("headline", "").strip()
     subline = meta.get("subline", "").strip()
@@ -142,7 +152,7 @@ def compose(post_dir: pathlib.Path) -> pathlib.Path:
     if not headline:
         raise SystemExit("headline is required")
 
-    bg = Image.open(post_dir / "background.jpg").convert("RGB")
+    bg = Image.open(post_dir / bg_name).convert("RGB")
     img = cover(bg)
     img = bottom_scrim(img)
     img = top_scrim(img)
@@ -191,7 +201,7 @@ def compose(post_dir: pathlib.Path) -> pathlib.Path:
     draw.text((MARGIN, footer_top + 44), HANDLE, font=font("Bold", 30), fill=IVORY,
               anchor="la", direction="ltr")
 
-    out = post_dir / "final.jpg"
+    out = post_dir / out_name
     img.convert("RGB").save(out, "JPEG", quality=92, optimize=True, progressive=True)
     return out
 
