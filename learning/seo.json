@@ -1,0 +1,4 @@
+[
+ {"num": 1, "date": "2026-10-12", "file": "claude/drafts/01-parastar-dar-manzel-tehran.md", "title": "پرستار در منزل تهران (صفحهٔ مادر)", "kind": "صفحهٔ خدمت", "status": "approved", "note": "تأیید پرستار ارشد؛ منتظر هاست"},
+ {"num": 2, "date": "2026-10-13", "file": "claude/drafts/02-tazrighat-dar-manzel-tehran.md", "title": "تزریقات در منزل تهران", "kind": "صفحهٔ خدمت", "status": "review", "note": "منتظر تأیید پرستار ارشد: سیفتی‌باکس، رویهٔ پنی‌سیلین، مجوز تبلیغ"}
+]

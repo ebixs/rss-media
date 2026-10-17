@@ -113,7 +113,7 @@ def update():
              "prior": {"mean": round(mu, 4), "alpha": round(prior[0], 3), "beta": round(prior[1], 3)},
              "avg_reward": avg_all, "avg_reward_last4": avg_recent, "arms": arms, "posts": scored}
     save("state.json", state)
-    history = load("history.json", [])
+    history = [h for h in load("history.json", []) if h.get("date") != now.date().isoformat()]
     history.append({"date": now.date().isoformat(), "posts_scored": len(scored),
                     "avg_reward": avg_all, "avg_reward_last4": avg_recent,
                     "best": {d: best_arm(arms, d) for d in DIMENSIONS}})
