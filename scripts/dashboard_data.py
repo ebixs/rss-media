@@ -58,6 +58,13 @@ def main(social_dir):
     for s in seo:
         rows.append({"channel": "seo", "date": s["date"], "title": s["title"], "status": s["status"],
                      "link": "", "detail": s.get("note", "")})
+    for r in rows:
+        r["id"] = f'{r["channel"]}-{r["date"]}-{re.sub(r"[^A-Za-z0-9]+", "-", r["detail"] or r["title"])[:40] or "x"}'
+    seen = {}
+    for r in rows:
+        seen[r["id"]] = seen.get(r["id"], 0) + 1
+        if seen[r["id"]] > 1:
+            r["id"] += f'-{seen[r["id"]]}'
     rows.sort(key=lambda r: r["date"], reverse=True)
     (OUT / "pipeline.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
 
