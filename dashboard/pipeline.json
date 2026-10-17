@@ -5,7 +5,8 @@
   "title": "ساکنان پردیس، رودهن و بومهن 👋",
   "status": "scheduled",
   "link": "",
-  "detail": "pardis"
+  "detail": "pardis",
+  "id": "telegram-2026-10-19-pardis"
  },
  {
   "channel": "telegram",
@@ -13,7 +14,8 @@
   "title": "این خدمات را در خانهٔ شما انجام می‌دهیم:",
   "status": "published",
   "link": "",
-  "detail": "khadamat"
+  "detail": "khadamat",
+  "id": "telegram-2026-10-17-khadamat"
  },
  {
   "channel": "telegram",
@@ -21,7 +23,8 @@
   "title": "⚠️ یک نکتهٔ ایمنی که خیلی‌ها نمی‌دانند",
   "status": "published",
   "link": "",
-  "detail": "nobat-aval"
+  "detail": "nobat-aval",
+  "id": "telegram-2026-10-15-nobat-aval"
  },
  {
   "channel": "instagram",
@@ -29,7 +32,8 @@
   "title": "آمادگی برای نمونه‌گیری خون در منزل",
   "status": "scheduled",
   "link": "",
-  "detail": "نمونه‌گیری خون در منزل"
+  "detail": "نمونه‌گیری خون در منزل",
+  "id": "instagram-2026-10-13--"
  },
  {
   "channel": "telegram",
@@ -37,7 +41,8 @@
   "title": "پرستار در راه است؛ این ۴ چیز را آماده کنید 👇",
   "status": "published",
   "link": "",
-  "detail": "amadegi"
+  "detail": "amadegi",
+  "id": "telegram-2026-10-13-amadegi"
  },
  {
   "channel": "seo",
@@ -45,7 +50,8 @@
   "title": "تزریقات در منزل تهران",
   "status": "review",
   "link": "",
-  "detail": "منتظر تأیید پرستار ارشد: سیفتی‌باکس، رویهٔ پنی‌سیلین، مجوز تبلیغ"
+  "detail": "منتظر تأیید پرستار ارشد: سیفتی‌باکس، رویهٔ پنی‌سیلین، مجوز تبلیغ",
+  "id": "seo-2026-10-13--"
  },
  {
   "channel": "instagram",
@@ -53,7 +59,8 @@
   "title": "پانسمان سوختگی در منزل",
   "status": "published",
   "link": "https://www.instagram.com/p/DeZWHKtCgK7/",
-  "detail": "پانسمان سوختگی"
+  "detail": "پانسمان سوختگی",
+  "id": "instagram-2026-10-12--"
  },
  {
   "channel": "telegram",
@@ -61,7 +68,8 @@
   "title": "سلام به همراهان رامان سلامت سهیل 🌿",
   "status": "published",
   "link": "",
-  "detail": "test"
+  "detail": "test",
+  "id": "telegram-2026-10-12-test"
  },
  {
   "channel": "seo",
@@ -69,6 +77,7 @@
   "title": "پرستار در منزل تهران (صفحهٔ مادر)",
   "status": "approved",
   "link": "",
-  "detail": "تأیید پرستار ارشد؛ منتظر هاست"
+  "detail": "تأیید پرستار ارشد؛ منتظر هاست",
+  "id": "seo-2026-10-12--"
  }
 ]

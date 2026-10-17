@@ -1,0 +1,29 @@
+[
+ {
+  "name": "RSS Instagram post (یکشنبه و چهارشنبه)",
+  "schedule": "CRON_TZ=Asia/Tehran 45 9 * * 0,3",
+  "enabled": true,
+  "last_fired_at": "2026-10-17T06:15:46Z",
+  "last_status": "ROUTINE_RUN_STATUS_FAILED",
+  "failure_reason": "ROUTINE_RUN_FAILURE_REASON_USAGE_LIMIT_REACHED",
+  "next_run_at": "2026-10-18T06:15:00Z"
+ },
+ {
+  "name": "RSS check & learn (یکشنبه و چهارشنبه)",
+  "schedule": "CRON_TZ=Asia/Tehran 57 20 * * 0,3",
+  "enabled": true,
+  "last_fired_at": "2026-10-17T17:27:31Z",
+  "last_status": "ROUTINE_RUN_STATUS_SUCCEEDED",
+  "failure_reason": "",
+  "next_run_at": "2026-10-18T17:27:00Z"
+ },
+ {
+  "name": "تولید محتوای سئو رامان سلامت سهیل (شنبه، دوشنبه، پنجشنبه)",
+  "schedule": "CRON_TZ=Asia/Tehran 52 8 * * 6,1,4",
+  "enabled": true,
+  "last_fired_at": "2026-10-17T05:22:33Z",
+  "last_status": "ROUTINE_RUN_STATUS_FAILED",
+  "failure_reason": "ROUTINE_RUN_FAILURE_REASON_USAGE_LIMIT_REACHED",
+  "next_run_at": "2026-10-19T05:22:00Z"
+ }
+]
