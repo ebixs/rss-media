@@ -1,0 +1,22 @@
+{
+ "post_id": 398948519,
+ "uuid": "-4243559459632496508",
+ "scheduled_for": "2026-10-18T20:30:00+03:30",
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/cbd6802c2c7ca8682f0e84b61fd82a52366ad0f6/posts/2026-10-18-serum-dar-manzel/final.jpg",
+ "review": {
+  "hookscore": "78.6 STRONG, Negative Command (#2)",
+  "caption_lint": "READY (no WARN, no FAIL)",
+  "human_score": 60.0,
+  "slop_density": 100,
+  "structural_tells": "1 flagged: the mandated CONTENT_RULES footer line \"📞 ۰۹۱۹۰۴۲۳۴۰۰\" (not a bullet list; kept verbatim per fixed ending)",
+  "medical_review": "passed",
+  "image": "candidate 2 chosen: clear roller clamp and IV line, natural hands/faces, no text in photo"
+ },
+ "learning": {
+  "service": "وصل سرم",
+  "goal": "تماس",
+  "source": "learn.py choose"
+ },
+ "telegram": "skipped: Sunday (Telegram is Wednesday only)",
+ "result": "pending"
+}
