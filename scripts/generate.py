@@ -63,6 +63,17 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from compose import compose, read_header  # noqa: E402
 
 
+# For one-off brand/campaign posts whose scene is not a home interior.
+CAMPAIGN_STYLE = (
+    "Cinematic editorial brand-campaign photograph, photorealistic, premium and hopeful mood, "
+    "colour palette of deep navy, ivory white and warm golden light with a subtle indigo accent, "
+    "realistic skin texture, natural hands and faces, Iranian people; any woman wears a chic, "
+    "modern, loosely draped hijab or elegant scarf (never a tight white wrap); calm uncluttered "
+    "space in the lower part of the frame for a headline; absolutely no text, no letters, no "
+    "labels, no logos, no watermark, no signage, no screens showing writing."
+)
+
+
 def run_model(model: str, kind: str, extra: dict, prompt: str, seed: int) -> bytes:
     url = f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CF_ACCOUNT_ID']}/ai/run/{model}"
     headers = {"Authorization": f"Bearer {os.environ['CF_API_TOKEN']}"}
@@ -114,10 +125,12 @@ def process(post_dir: pathlib.Path) -> dict:
     if not prompt:
         return {"ok": False, "error": "image_prompt is missing in post.md"}
     count = max(1, min(3, int(meta.get("candidates", "2") or 2)))
-    full = f"{prompt}. {STYLE}"
+    style = CAMPAIGN_STYLE if meta.get("style", "").strip() == "campaign" else STYLE
     base_seed = int.from_bytes(os.urandom(3), "big")
     made, models, errors = [], [], []
     for n in range(1, count + 1):
+        # image_prompt_<n> lets one post try different creative concepts
+        full = f"{(meta.get(f'image_prompt_{n}') or prompt).strip()}. {style}"
         try:
             data, model, errs = generate(full, base_seed + n * 7919)
         except RuntimeError as err:
