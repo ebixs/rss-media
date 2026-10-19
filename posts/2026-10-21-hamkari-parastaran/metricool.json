@@ -1,5 +1,5 @@
 {
- "post_id": 400011439,
+ "post_id": 400015671,
  "uuid": "615016293873566640",
  "scheduled_for": "2026-10-21T20:30:00+03:30",
  "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/842ca300c580935edfe5b99e345a1596ee848b5e/posts/2026-10-21-hamkari-parastaran/final.jpg",
@@ -10,9 +10,10 @@
   "slop_density": 100,
   "structural_tells": "1 flagged: the mandated footer line «📞 ۰۹۱۹۰۴۲۳۴۰۰» (kept verbatim per CONTENT_RULES)",
   "legal_review": "no competitor brand names, no income promises, no absolute safety claim; online sign-up described as coming soon",
-  "image": "candidate 3 chosen (glowing paper house in a nurse's hands): most original concept, natural hands, no text in photo"
+  "image": "all three candidates used as a carousel at the owner's request; final-3 is the cover"
  },
  "note": "one-off nurse recruitment post requested by the owner; not chosen by the learning loop",
  "telegram": "queued for 2026-10-26 20:30 Tehran (this week's Telegram slot was already used)",
- "result": "pending"
+ "result": "pending",
+ "format": "carousel of 3: final-3, final-2, final-1 (owner asked for all three)"
 }
