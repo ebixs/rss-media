@@ -1,0 +1,22 @@
+{
+ "post_id": 412694915,
+ "uuid": "-7912186787495785113",
+ "scheduled_for": "2026-11-01T20:30:00+03:30",
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/62dc4aa07c71c9021bf8ad55747da3dae1467ac6/posts/2026-11-01-navar-ghalb-dar-manzel/final.jpg",
+ "review": {
+  "hookscore": "56.0 OK, Numbered With A Favourite (#11)",
+  "caption_lint": "READY (no WARN, no FAIL)",
+  "human_score": 60.0,
+  "slop_density": 100,
+  "structural_tells": "1 flagged: the mandated CONTENT_RULES footer line \"📞 ۰۹۱۹۰۴۲۳۴۰۰\" (not a bullet list; kept verbatim per fixed ending)",
+  "medical_review": "passed",
+  "image": "candidate 2 chosen: no text or label artefacts, natural hands/faces, electrode on chest matches caption; candidate 1 had a small label-like patch on the uniform"
+ },
+ "learning": {
+  "service": "نوار قلب در منزل",
+  "goal": "اعتمادسازی",
+  "source": "learn.py choose"
+ },
+ "telegram": "skipped: Sunday (Telegram is Wednesday only)",
+ "result": "pending"
+}
