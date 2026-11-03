@@ -1,0 +1,24 @@
+{
+ "post_id": 414881553,
+ "uuid": "5749595759569748785",
+ "scheduled_for": "2026-11-03T20:30:00+03:30",
+ "media_urls": [
+  "https://raw.githubusercontent.com/ebixs/rss-media/acf4a19d13b8b5881688683136538ed4374c1bb2/posts/2026-11-03-hamkari-panj-vizit/final-2.jpg",
+  "https://raw.githubusercontent.com/ebixs/rss-media/acf4a19d13b8b5881688683136538ed4374c1bb2/posts/2026-11-03-hamkari-panj-vizit/final-1.jpg",
+  "https://raw.githubusercontent.com/ebixs/rss-media/acf4a19d13b8b5881688683136538ed4374c1bb2/posts/2026-11-03-hamkari-panj-vizit/final-3.jpg"
+ ],
+ "format": "carousel of 3",
+ "review": {
+  "hookscore": "75.0 STRONG, If This, Then Watch (first round top was 42.4; rewritten once)",
+  "caption_lint": "READY (no WARN, no FAIL)",
+  "human_score": 62.7,
+  "slop_density": 100,
+  "structural_tells": "1 flagged: the mandated footer line «📞 ۰۹۱۹۰۴۲۳۴۰۰»",
+  "legal_review": "passed",
+  "images": "all 3 passed; order final-2 (doorway, cover), final-1 (nurse bag), final-3 (stairwell)",
+  "alt_text_note": "alt text of image 2 says «کیف پرمهر» by mistake; meaning harmless, left unchanged"
+ },
+ "note": "every-two-weeks nurse recruitment call; not chosen by the learning loop",
+ "telegram": "not sent (Telegram stays once a week)",
+ "result": "pending"
+}
