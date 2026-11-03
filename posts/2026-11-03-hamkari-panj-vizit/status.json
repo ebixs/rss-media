@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "candidates": [
+    "final-1.jpg",
+    "final-2.jpg",
+    "final-3.jpg"
+  ],
+  "models": [
+    "flux-2-klein-9b",
+    "flux-2-klein-9b",
+    "flux-2-klein-9b"
+  ],
+  "errors": []
+}
