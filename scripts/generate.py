@@ -64,6 +64,7 @@ STYLE = (
 sys.path.insert(0, str(ROOT / "scripts"))
 from compose import compose, read_header  # noqa: E402
 from reel import build as build_reel  # noqa: E402
+from reel_motion import build as build_motion  # noqa: E402
 
 
 # For one-off brand/campaign posts whose scene is not a home interior.
@@ -155,9 +156,15 @@ def process(post_dir: pathlib.Path) -> dict:
     if is_reel:
         if len(models) < 3:
             return {"ok": False, "format": "reel", "error": "a reel needs all 3 scene photos", "errors": errors[:5]}
-        build_reel(post_dir)
+        try:
+            build_motion(post_dir)          # motion graphics + original music
+            engine = "motion"
+        except Exception as err:            # never lose the post: fall back to the simple reel
+            errors.append(f"motion reel failed, simple reel used: {err}"[:300])
+            build_reel(post_dir)
+            engine = "simple"
         made = ["reel.mp4", "cover.jpg", "frame-1.jpg", "frame-2.jpg", "frame-3.jpg", "frame-4.jpg"]
-        return {"ok": True, "format": "reel", "candidates": made, "models": models, "errors": errors[:5]}
+        return {"ok": True, "format": "reel", "engine": engine, "candidates": made, "models": models, "errors": errors[:5]}
     return {"ok": bool(made), "candidates": made, "models": models, "errors": errors[:5]}
 
 
