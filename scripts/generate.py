@@ -13,6 +13,8 @@ Each post lives in posts/<slug>/post.md with a header like:
     headline: ...
     subline: ...
     candidates: 2            (optional, 1-3, default 2)
+    format: reel             (optional) -> 3 vertical photos from image_prompt_1..3 and a
+                             15 s reel.mp4 built by scripts/reel.py (needs scene_1..3)
     image_prompt: English scene description (no text in the image)
     ---
     caption ...
@@ -61,6 +63,7 @@ STYLE = (
 
 sys.path.insert(0, str(ROOT / "scripts"))
 from compose import compose, read_header  # noqa: E402
+from reel import build as build_reel  # noqa: E402
 
 
 # For one-off brand/campaign posts whose scene is not a home interior.
@@ -109,9 +112,15 @@ def run_model(model: str, kind: str, extra: dict, prompt: str, seed: int) -> byt
     return base64.b64decode(image)
 
 
-def generate(prompt: str, seed: int) -> tuple[bytes, str, list[str]]:
+VERTICAL = {"flux-2-klein-9b": {"width": "864", "height": "1536"},
+            "lucid-origin": {"width": 864, "height": 1536, "steps": 30, "guidance": 4.5}}
+
+
+def generate(prompt: str, seed: int, vertical: bool = False) -> tuple[bytes, str, list[str]]:
     errors = []
     for short, model, kind, extra in MODELS:
+        if vertical:
+            extra = VERTICAL.get(short, extra)
         try:
             return run_model(model, kind, extra, prompt, seed), short, errors
         except RuntimeError as err:
@@ -124,7 +133,8 @@ def process(post_dir: pathlib.Path) -> dict:
     prompt = meta.get("image_prompt", "").strip()
     if not prompt:
         return {"ok": False, "error": "image_prompt is missing in post.md"}
-    count = max(1, min(3, int(meta.get("candidates", "2") or 2)))
+    is_reel = meta.get("format", "").strip() == "reel"
+    count = 3 if is_reel else max(1, min(3, int(meta.get("candidates", "2") or 2)))
     style = CAMPAIGN_STYLE if meta.get("style", "").strip() == "campaign" else STYLE
     base_seed = int.from_bytes(os.urandom(3), "big")
     made, models, errors = [], [], []
@@ -132,21 +142,30 @@ def process(post_dir: pathlib.Path) -> dict:
         # image_prompt_<n> lets one post try different creative concepts
         full = f"{(meta.get(f'image_prompt_{n}') or prompt).strip()}. {style}"
         try:
-            data, model, errs = generate(full, base_seed + n * 7919)
+            data, model, errs = generate(full, base_seed + n * 7919, vertical=is_reel)
         except RuntimeError as err:
             errors.append(str(err))
             continue
         errors += errs
         (post_dir / f"background-{n}.jpg").write_bytes(data)
-        compose(post_dir, f"background-{n}.jpg", f"final-{n}.jpg")
-        made.append(f"final-{n}.jpg")
+        if not is_reel:
+            compose(post_dir, f"background-{n}.jpg", f"final-{n}.jpg")
+            made.append(f"final-{n}.jpg")
         models.append(model)
+    if is_reel:
+        if len(models) < 3:
+            return {"ok": False, "format": "reel", "error": "a reel needs all 3 scene photos", "errors": errors[:5]}
+        build_reel(post_dir)
+        made = ["reel.mp4", "cover.jpg", "frame-1.jpg", "frame-2.jpg", "frame-3.jpg", "frame-4.jpg"]
+        return {"ok": True, "format": "reel", "candidates": made, "models": models, "errors": errors[:5]}
     return {"ok": bool(made), "candidates": made, "models": models, "errors": errors[:5]}
 
 
 def needs_work(post_dir: pathlib.Path) -> bool:
     if (post_dir / "REGENERATE").exists():
         return True
+    if (post_dir / "reel.mp4").exists():
+        return False
     return not any(post_dir.glob("final*.jpg"))
 
 
@@ -161,7 +180,8 @@ def main() -> int:
         if not needs_work(post_dir):
             continue
         (post_dir / "REGENERATE").unlink(missing_ok=True)
-        for old in list(post_dir.glob("final-*.jpg")) + list(post_dir.glob("background-*.jpg")):
+        for old in (list(post_dir.glob("final-*.jpg")) + list(post_dir.glob("background-*.jpg"))
+                    + list(post_dir.glob("frame-*.jpg")) + list(post_dir.glob("reel.mp4"))):
             old.unlink()
         try:
             status = process(post_dir)

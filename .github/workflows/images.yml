@@ -28,10 +28,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Pillow with Persian text shaping
+      - name: Install Pillow with Persian text shaping, and ffmpeg for reels
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq libraqm0 libfribidi0 libharfbuzz0b
+          sudo apt-get install -y -qq libraqm0 libfribidi0 libharfbuzz0b ffmpeg
           pip install --quiet "Pillow>=11"
           python -c "from PIL import features; assert features.check('raqm'), 'raqm missing'"
 
