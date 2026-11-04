@@ -1,0 +1,18 @@
+{
+ "post_id": 416130359,
+ "uuid": "3068152221974613441",
+ "scheduled_for": "2026-11-04T20:30:00+03:30",
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/82dd6ccd002bfb68447f84ddeac3269e2bd30312/posts/2026-11-04-tazrigh-panj-rooz/final.jpg",
+ "review": {
+  "hookscore": "51.3 OK, The Verbatim Question (weakest STAKES 20; quote is the patient's question, no claim of real volume)",
+  "caption_lint": "READY (no WARN, no FAIL)",
+  "human_score": 61.8,
+  "slop_density": 100,
+  "structural_tells": "1 flagged: the mandated footer line «📞 ۰۹۱۹۰۴۲۳۴۰۰»; verified 0 without it",
+  "medical_review": "passed",
+  "images": "final-2 chosen: hands natural when zoomed, cane stays clear of the headline; final-1 cane cuts through headline",
+  "alt_text_note": "alt text says «عصابه‌دست» joined; meaning clear, left unchanged"
+ },
+ "telegram": "queued 2026-11-04T1700Z",
+ "result": "pending"
+}
