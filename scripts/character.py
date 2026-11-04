@@ -52,9 +52,12 @@ def main() -> int:
     out = ROOT / "characters" / "out"
     out.mkdir(parents=True, exist_ok=True)
     fails = 0
-    for j in jobs:
+    # seed-major order: every job gets its first image before any job gets a second
+    order = [(j, seed) for k in range(max(len(j.get("seeds", [1])) for j in jobs))
+             for j in jobs if k < len(j.get("seeds", [1])) for seed in [j["seeds"][k] if "seeds" in j else 1]]
+    for j, seed in order:
         refs = [ROOT / r for r in j.get("refs", [])]
-        for seed in j.get("seeds", [1]):
+        if True:
             dest = out / f"{j['id']}-{seed}.jpg"
             if dest.exists():
                 continue
