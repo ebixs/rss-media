@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "format": "reel",
+  "candidates": [
+    "reel.mp4",
+    "cover.jpg",
+    "frame-1.jpg",
+    "frame-2.jpg",
+    "frame-3.jpg",
+    "frame-4.jpg"
+  ],
+  "models": [
+    "flux-2-klein-9b",
+    "flux-2-klein-9b",
+    "flux-2-klein-9b"
+  ],
+  "errors": []
+}
