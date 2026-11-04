@@ -1,0 +1,34 @@
+[
+ {
+  "id": "a-sara",
+  "prompt": "A friendly young Iranian female home-care nurse character with a warm smile and big expressive brown eyes, wearing a navy blue nurse uniform with mint green trim, a soft light-grey loosely draped hijab covering her hair, a silver stethoscope around her neck, holding a navy medical bag with a mint stripe, white sneakers, waving hello. high-quality 3D animated feature film style render, stylized like modern family animation movies, soft global illumination, gentle rim light, subsurface scattering on skin, smooth clean materials, full body, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, no text, no letters, no logo, no watermark",
+  "seeds": [
+   11,
+   23
+  ]
+ },
+ {
+  "id": "b-chibi",
+  "prompt": "A cute chibi 3D figurine of a young Iranian female nurse: big round head, small body, huge sparkly brown eyes, rosy cheeks, a soft mint green loosely draped hijab covering her hair, navy blue nurse uniform, holding a small clipboard with green check marks, happy expression. high-quality 3D animated feature film style render, stylized like modern family animation movies, soft global illumination, gentle rim light, subsurface scattering on skin, smooth clean materials, full body, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, no text, no letters, no logo, no watermark",
+  "seeds": [
+   11,
+   23
+  ]
+ },
+ {
+  "id": "c-house",
+  "prompt": "A cute friendly cartoon house mascot character: small house with a dark navy roof and warm ivory walls, two square mint green windows as big expressive eyes with pupils, a smiling arched door as its mouth, rosy cheeks, tiny navy arms and legs with white gloves, a silver stethoscope hanging around it, waving, holding a red heart-shaped balloon. high-quality 3D animated feature film style render, stylized like modern family animation movies, soft global illumination, gentle rim light, subsurface scattering on skin, smooth clean materials, full body, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, no text, no letters, no logo, no watermark",
+  "seeds": [
+   11,
+   23
+  ]
+ },
+ {
+  "id": "d-reza",
+  "prompt": "A friendly young Iranian male home-care nurse character with short neat dark hair and a short trimmed beard, kind smile, wearing a navy blue nurse uniform with mint green trim, a silver stethoscope around his neck, holding a tablet against his chest, white sneakers. high-quality 3D animated feature film style render, stylized like modern family animation movies, soft global illumination, gentle rim light, subsurface scattering on skin, smooth clean materials, full body, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, no text, no letters, no logo, no watermark",
+  "seeds": [
+   11,
+   23
+  ]
+ }
+]
