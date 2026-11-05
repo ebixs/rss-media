@@ -170,8 +170,57 @@ def generate(prompt: str, seed: int, vertical: bool = False) -> tuple[bytes, str
     raise RuntimeError(" | ".join(errors))
 
 
+BG_STYLE = (
+    "High-quality 3D animated feature film background plate, stylized like modern family animation movies, soft global "
+    "illumination, warm cinematic light, colour palette of navy, ivory, mint green and warm gold, vertical 9:16 composition, "
+    "an EMPTY set with NO people, NO characters and NO animals, open floor space in the middle and lower part of the frame, "
+    "absolutely no text, no letters, no signs, no logos."
+)
+
+
+def process_dialogue(post_dir: pathlib.Path) -> dict:
+    """format: dialogue -> script.json (scenes, actors, lines) -> 3D backgrounds -> reel.mp4 (reel_cartoon.py)."""
+    import reel_cartoon
+    script = json.loads((post_dir / "script.json").read_text(encoding="utf-8"))
+    use_reel_account(True)
+    REFS[:] = []
+    errors, made = [], 0
+    seed = int.from_bytes(os.urandom(3), "big")
+    for i, sc in enumerate(script["scenes"]):
+        if not sc.get("bg_prompt"):
+            continue
+        dest = post_dir / f"bg-{i + 1}.jpg"
+        if not dest.exists():
+            try:
+                data, _, errs = generate(f"{sc['bg_prompt'].strip()}. {BG_STYLE}", seed + i * 7919, vertical=True)
+            except RuntimeError as err:
+                if CREDS["account"] == "CF_REEL_ACCOUNT_ID":
+                    use_reel_account(False)
+                    try:
+                        data, _, errs = generate(f"{sc['bg_prompt'].strip()}. {BG_STYLE}", seed + i * 7919, vertical=True)
+                    except RuntimeError as err2:
+                        errors.append(f"scene {i + 1} background: {err2}"[:300])
+                        continue
+                else:
+                    errors.append(f"scene {i + 1} background: {err}"[:300])
+                    continue
+            dest.write_bytes(data)
+            made += 1
+        sc["bg_image"] = str(dest)
+    total = script["total"]
+    mids = [((sc["start"] + sc["end"]) / 2 + 0.6) for sc in script["scenes"]][:5] + [total - 1.2]
+    stills = {int(t * reel_cartoon.FPS): str(post_dir / f"frame-{k + 1}.jpg") for k, t in enumerate(mids)}
+    reel_cartoon.build(script, post_dir / "reel.mp4", stills)
+    (post_dir / "cover.jpg").write_bytes((post_dir / "frame-1.jpg").read_bytes())
+    return {"ok": True, "format": "dialogue", "engine": "cartoon", "backgrounds_made": made,
+            "candidates": ["reel.mp4", "cover.jpg"] + [pathlib.Path(v).name for v in stills.values()],
+            "seconds": total, "errors": errors[:5]}
+
+
 def process(post_dir: pathlib.Path) -> dict:
     meta = read_header(post_dir / "post.md")
+    if meta.get("format", "").strip() == "dialogue":
+        return process_dialogue(post_dir)
     prompt = meta.get("image_prompt", "").strip()
     if not prompt:
         return {"ok": False, "error": "image_prompt is missing in post.md"}
@@ -222,7 +271,7 @@ def process(post_dir: pathlib.Path) -> dict:
 
 
 def needs_work(post_dir: pathlib.Path) -> bool:
-    if (post_dir / "REGENERATE").exists():
+    if (post_dir / "REGENERATE").exists() or (post_dir / "REGENERATE_BG").exists():
         return True
     if (post_dir / "reel.mp4").exists():
         return False
@@ -240,9 +289,12 @@ def main() -> int:
         if not needs_work(post_dir):
             continue
         (post_dir / "REGENERATE").unlink(missing_ok=True)
+        regen_bg = (post_dir / "REGENERATE_BG").exists()
         for old in (list(post_dir.glob("final-*.jpg")) + list(post_dir.glob("background-*.jpg"))
-                    + list(post_dir.glob("frame-*.jpg")) + list(post_dir.glob("reel.mp4"))):
+                    + list(post_dir.glob("frame-*.jpg")) + list(post_dir.glob("reel.mp4"))
+                    + (list(post_dir.glob("bg-*.jpg")) if regen_bg else [])):
             old.unlink()
+        (post_dir / "REGENERATE_BG").unlink(missing_ok=True)
         try:
             status = process(post_dir)
         except Exception as err:  # keep going with the next post

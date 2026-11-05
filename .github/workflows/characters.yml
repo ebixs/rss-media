@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install --quiet "Pillow>=11"
+      - run: pip install --quiet "Pillow>=11" numpy scipy rembg onnxruntime
       - name: Render
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -30,6 +30,9 @@ jobs:
           CF_REEL_ACCOUNT_ID: ${{ secrets.CF_REEL_ACCOUNT_ID }}
           CF_REEL_API_TOKEN: ${{ secrets.CF_REEL_API_TOKEN }}
         run: python scripts/character.py
+      - name: Cut out new poses
+        if: always()
+        run: python scripts/cutouts.py
       - name: Commit
         if: always()
         run: |

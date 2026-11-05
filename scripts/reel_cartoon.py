@@ -125,18 +125,60 @@ def bubble_html(line: dict, actor: dict) -> str:
             f'{typed(line["text"], line["at"], line["dur"])}</div>')
 
 
+ICONS = {
+    "pill": '<svg viewBox="0 0 100 100"><rect x="18" y="38" width="64" height="26" rx="13" fill="#FAF7F0" stroke="#0F2D4A" stroke-width="5" transform="rotate(-30 50 51)"/><path d="M50 30v42" stroke="#0F2D4A" stroke-width="5" transform="rotate(-30 50 51)"/><rect x="50" y="38" width="32" height="26" rx="13" fill="#8A90FF" transform="rotate(-30 50 51)"/></svg>',
+    "calendar": '<svg viewBox="0 0 100 100"><rect x="14" y="20" width="72" height="66" rx="12" fill="#FAF7F0" stroke="#0F2D4A" stroke-width="5"/><rect x="14" y="20" width="72" height="18" rx="8" fill="#E86A6A"/><g fill="#0F2D4A"><circle cx="34" cy="55" r="5"/><circle cx="50" cy="55" r="5"/><circle cx="66" cy="55" r="5"/><circle cx="34" cy="71" r="5"/><circle cx="50" cy="71" r="5"/></g></svg>',
+    "clock": '<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="#FAF7F0" stroke="#0F2D4A" stroke-width="6"/><path d="M50 28v24l16 10" stroke="#0F2D4A" stroke-width="6" fill="none" stroke-linecap="round"/></svg>',
+    "check": '<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="#3DBE7A"/><path d="M30 52l13 13 27-29" stroke="#fff" stroke-width="9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    "heart": '<svg viewBox="0 0 100 100"><path d="M50 84C22 64 10 50 10 34a20 20 0 0 1 40-6 20 20 0 0 1 40 6c0 16-12 30-40 50z" fill="#E86A6A"/></svg>',
+    "phone": '<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="#3DBE7A"/><path d="M36 28c4 0 8 9 8 12s-5 4-5 6 9 15 15 15 3-5 6-5 12 4 12 8-6 10-12 10C42 74 26 58 26 40c0-6 6-12 10-12z" fill="#fff"/></svg>',
+    "prescription": '<svg viewBox="0 0 100 100"><rect x="22" y="12" width="56" height="76" rx="8" fill="#FAF7F0" stroke="#0F2D4A" stroke-width="5"/><g stroke="#B8C2CC" stroke-width="5" stroke-linecap="round"><path d="M34 34h32"/><path d="M34 48h32"/><path d="M34 62h20"/></g><circle cx="64" cy="70" r="9" fill="#8A90FF"/></svg>',
+}
+
+
+def props_html(sc: dict) -> str:
+    out = []
+    for pr in sc.get("props", []):
+        icon = ICONS.get(pr.get("icon", ""), "")
+        if icon:
+            out.append(f'<div class="prop" style="left:{pr.get("x", 540)}px;top:{pr.get("y", 700)}px;width:{pr.get("size", 150)}px;'
+                       f'animation:propin .6s cubic-bezier(.34,1.56,.64,1) {pr["at"]:.2f}s both, floaty 2s ease-in-out {pr["at"] + .6:.2f}s 6">{icon}</div>')
+    return "".join(out)
+
+
+def checklist_html(sc: dict) -> str:
+    """A card that ticks items off one by one (for 'what to prepare' moments)."""
+    items = []
+    for k, it in enumerate(sc["items"]):
+        at = sc.get("items_at", sc["start"] + 0.9) + k * sc.get("items_step", 1.1)
+        items.append(f'<li style="animation:fu .5s ease {at:.2f}s both"><span class="tick" style="animation:pp .5s cubic-bezier(.34,1.56,.64,1) {at + .35:.2f}s both">✓</span>{html.escape(it)}</li>')
+    title = html.escape(sc.get("title", ""))
+    return (f'<div class="card" style="animation:pp .6s cubic-bezier(.34,1.56,.64,1) {sc["start"] + .3:.2f}s both">'
+            f'<h3>{title}</h3><ul>{"".join(items)}</ul></div>')
+
+
+def bg_html(sc: dict, script: dict, i: int) -> str:
+    img = sc.get("bg_image")
+    if img and pathlib.Path(img).is_file():
+        return f'<div class="bg photo" style="background-image:url(\'{pathlib.Path(img).resolve().as_uri()}\')"></div>'
+    return BACKGROUNDS[sc.get("bg", "door")].replace("%WINDOWS%", windows(script.get("seed", 3) + i))
+
+
 def page(script: dict) -> str:
     parts = []
     for i, sc in enumerate(script["scenes"]):
-        bg = BACKGROUNDS[sc["bg"]].replace("%WINDOWS%", windows(script.get("seed", 3) + i))
+        bg = bg_html(sc, script, i)
         enter = "" if i == 0 else f"animation:wipe .5s cubic-bezier(.7,0,.2,1) {sc['start']:.2f}s both;"
-        actors = {a["name"]: a for a in sc["actors"]}
+        actors = {a["name"]: a for a in sc.get("actors", [])}
         body = []
-        for a in sc["actors"]:
+        for a in sc.get("actors", []):
             sp = [(l["at"] + 0.15, l["dur"] * 0.5) for l in sc.get("lines", []) if l["who"] == a["name"]]
             body.append(actor_html(a, sc, sp))
         for l in sc.get("lines", []):
             body.append(bubble_html(l, actors[l["who"]]))
+        body.append(props_html(sc))
+        if sc.get("items"):
+            body.append(checklist_html(sc))
         for s in sc.get("sfx", []):
             if s["kind"] == "ding":
                 body.append(f'<div class="ding" style="animation:dingpop 1s ease-out {s["at"]:.2f}s both"><svg viewBox="0 0 100 100" width="130" height="130"><path d="M50 12c-16 0-26 13-26 30v18l-9 13h70l-9-13V42c0-17-10-30-26-30z" fill="#F6C343" stroke="#0F2D4A" stroke-width="5"/><circle cx="50" cy="82" r="8" fill="#0F2D4A"/></svg></div>')
@@ -152,6 +194,17 @@ html, body {{ width: {W}px; height: {H}px; overflow: hidden; background: #0F2D4A
 .scene {{ position: absolute; inset: 0; overflow: hidden; }}
 .cam {{ position: absolute; inset: -3%; }}
 .bg {{ position: absolute; inset: 0; filter: blur(5px) saturate(1.05); }}
+.bg.photo {{ background-size: cover; background-position: center 40%; filter: blur(2.5px) saturate(1.05) brightness(.97); }}
+.prop {{ position: absolute; z-index: 45; filter: drop-shadow(0 10px 12px rgba(10,20,40,.3)); }}
+.prop svg {{ width: 100%; height: auto; display: block; }}
+@keyframes propin {{ from {{ opacity: 0; transform: scale(.2) rotate(-40deg); }} to {{ opacity: 1; transform: none; }} }}
+@keyframes floaty {{ 0%,100% {{ transform: translateY(0); }} 50% {{ transform: translateY(-16px) rotate(4deg); }} }}
+.card {{ position: absolute; z-index: 55; left: 90px; right: 90px; top: 330px; padding: 44px 50px; border-radius: 48px; background: rgba(250,247,240,.96);
+  border: 5px solid #0F2D4A; box-shadow: 0 24px 50px rgba(10,20,40,.3); }}
+.card h3 {{ color: #0F2D4A; font-weight: 900; font-size: 60px; margin-bottom: 26px; }}
+.card ul {{ list-style: none; }}
+.card li {{ color: #0F2D4A; font-weight: 700; font-size: 50px; line-height: 1.35; margin: 20px 0; display: flex; gap: 22px; align-items: center; }}
+.tick {{ flex: 0 0 auto; width: 70px; height: 70px; border-radius: 50%; background: #3DBE7A; color: #fff; font-size: 46px; display: flex; align-items: center; justify-content: center; }}
 .bg svg {{ width: 100%; height: 100%; display: block; }}
 @keyframes cam {{ from {{ transform: scale(1.06) translateX(14px); }} to {{ transform: scale(1.0) translateX(-14px); }} }}
 @keyframes wipe {{ from {{ clip-path: circle(0% at 50% 60%); }} to {{ clip-path: circle(150% at 50% 60%); }} }}
@@ -233,8 +286,12 @@ def soundtrack(script: dict) -> np.ndarray:
         if sc["start"] > 0:
             events.append(("whoosh", sc["start"] - 0.1))
         events += [("pop", l["at"]) for l in sc.get("lines", [])]
-        events += [("pop", a.get("at", sc["start"]) + 0.15) for a in sc["actors"] if a.get("enter") == "pop"]
+        events += [("pop", a.get("at", sc["start"]) + 0.15) for a in sc.get("actors", []) if a.get("enter") == "pop"]
         events += [(s["kind"], s["at"]) for s in sc.get("sfx", [])]
+        events += [("pop", p["at"]) for p in sc.get("props", [])]
+        if sc.get("items"):
+            base = sc.get("items_at", sc["start"] + 0.9)
+            events += [("pop", base + k * sc.get("items_step", 1.1) + .35) for k in range(len(sc["items"]))]
     events.append(("whoosh", script["end_at"] - 0.1))
     for kind, at in events:
         s = sfx(kind)
