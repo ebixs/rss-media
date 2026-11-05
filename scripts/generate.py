@@ -91,6 +91,19 @@ def use_reel_account(on: bool) -> None:
         CREDS.update(account="CF_ACCOUNT_ID", token="CF_API_TOKEN")
 
 
+REFS: list[pathlib.Path] = []   # reference images for the current request (FLUX.2 only)
+
+
+def ref_png(path: pathlib.Path) -> bytes:
+    import io
+    from PIL import Image
+    im = Image.open(path).convert("RGB")
+    im.thumbnail((508, 508), Image.LANCZOS)
+    buf = io.BytesIO()
+    im.save(buf, "PNG")
+    return buf.getvalue()
+
+
 def run_model(model: str, kind: str, extra: dict, prompt: str, seed: int) -> bytes:
     url = f"https://api.cloudflare.com/client/v4/accounts/{os.environ[CREDS['account']].strip()}/ai/run/{model}"
     headers = {"Authorization": f"Bearer {os.environ[CREDS['token']].strip()}"}
@@ -104,6 +117,9 @@ def run_model(model: str, kind: str, extra: dict, prompt: str, seed: int) -> byt
             f'--{boundary}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode()
             for k, v in fields.items()
         ]
+        for i, ref in enumerate(REFS[:4]):
+            parts.append(f'--{boundary}\r\nContent-Disposition: form-data; name="input_image_{i}"; filename="r{i}.png"\r\n'
+                         f'Content-Type: image/png\r\n\r\n'.encode() + ref_png(ref) + b"\r\n")
         parts.append(f"--{boundary}--\r\n".encode())
         body = b"".join(parts)
         headers["Content-Type"] = f"multipart/form-data; boundary={boundary}"
@@ -130,9 +146,21 @@ VERTICAL = {"flux-2-klein-9b": {"width": "864", "height": "1536"},
             "lucid-origin": {"width": 864, "height": 1536, "steps": 30, "guidance": 4.5}}
 
 
+# 3D animated-film look for reels with the brand characters (characters/README.md).
+CARTOON_STYLE = (
+    "High-quality 3D animated feature film still, stylized like modern family animation movies, "
+    "soft global illumination, warm cinematic lighting, gentle rim light, smooth clean materials, "
+    "colour palette of navy, ivory, mint green and warm gold, Tehran setting, vertical composition, "
+    "characters in the upper half of the frame, calm space in the lower part; keep every character "
+    "exactly as in its reference image; absolutely no text, no letters, no labels, no logos, no signage."
+)
+
+
 def generate(prompt: str, seed: int, vertical: bool = False) -> tuple[bytes, str, list[str]]:
     errors = []
     for short, model, kind, extra in MODELS:
+        if REFS and kind != "multipart":
+            continue  # only FLUX.2 understands reference images; never draw an off-model character
         if vertical:
             extra = VERTICAL.get(short, extra)
         try:
@@ -150,12 +178,14 @@ def process(post_dir: pathlib.Path) -> dict:
     is_reel = meta.get("format", "").strip() == "reel"
     use_reel_account(is_reel)
     count = 3 if is_reel else max(1, min(3, int(meta.get("candidates", "2") or 2)))
-    style = CAMPAIGN_STYLE if meta.get("style", "").strip() == "campaign" else STYLE
+    style = {"campaign": CAMPAIGN_STYLE, "cartoon3d": CARTOON_STYLE}.get(meta.get("style", "").strip(), STYLE)
     base_seed = int.from_bytes(os.urandom(3), "big")
     made, models, errors = [], [], []
     for n in range(1, count + 1):
         # image_prompt_<n> lets one post try different creative concepts
         full = f"{(meta.get(f'image_prompt_{n}') or prompt).strip()}. {style}"
+        names = [c.strip() for c in (meta.get(f"characters_{n}") or meta.get("characters") or "").split(",") if c.strip()]
+        REFS[:] = [ROOT / "characters" / "ref" / f"{c}.jpg" for c in names if (ROOT / "characters" / "ref" / f"{c}.jpg").is_file()][:4]
         try:
             data, model, errs = generate(full, base_seed + n * 7919, vertical=is_reel)
         except RuntimeError as err:
