@@ -1,0 +1,14 @@
+[
+ {"name": "khonejan-worried", "ref": "khonejan", "pose": "looking worried and sad, both gloved hands pressed to its cheeks, eyebrows raised in concern, no balloon"},
+ {"name": "mahtab-phone", "ref": "mahtab", "pose": "smiling and talking on a plain mobile phone held to her ear, other hand relaxed, medical bag on the floor beside her"},
+ {"name": "ebrahim-thumbsup", "ref": "ebrahim", "pose": "smiling warmly and giving a thumbs up with his right hand, tablet held in the left hand at his side"},
+ {"name": "mahtab-explain", "ref": "mahtab", "pose": "explaining kindly with one open palm raised to the side at chest height, friendly smile, no bag"},
+ {"name": "khonejan-happy", "ref": "khonejan", "pose": "jumping for joy with both gloved arms raised high, big happy smile, door slightly open, red heart balloon floating above"},
+ {"name": "ebrahim-point", "ref": "ebrahim", "pose": "pointing up and to the side with his index finger as if showing something important, confident friendly smile"},
+ {"name": "mahtab-clipboard", "ref": "mahtab", "pose": "holding a plain clipboard with a blank sheet against her chest, looking at the viewer with a reassuring smile"},
+ {"name": "khonejan-thinking", "ref": "khonejan", "pose": "thinking, one gloved hand on its chin, eyes looking up, small question-like curious expression, no balloon"},
+ {"name": "ebrahim-walk", "ref": "ebrahim", "pose": "walking forward briskly carrying a navy medical bag with a mint stripe, mid-stride, side three-quarter view"},
+ {"name": "mahtab-wave-both", "ref": "mahtab", "pose": "waving goodbye happily with her right hand, left hand holding the medical bag, slight head tilt"},
+ {"name": "khonejan-surprised", "ref": "khonejan", "pose": "surprised and delighted, window-eyes wide open, door open like an open mouth, gloved hands up beside it"},
+ {"name": "ebrahim-explain", "ref": "ebrahim", "pose": "explaining calmly with both open hands in front of his chest, attentive kind expression, tablet tucked under his arm"}
+]
