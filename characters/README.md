@@ -13,3 +13,11 @@ In post.md a reel scene names its characters with `characters_<n>: mahtab, khone
 (up to 4). In image_prompt_<n> refer to them as "the nurse from image 0",
 "the house character from image 1", in the same order.
 Rules: no text in images; never a real patient; medical scenes stay safe (no needles shown).
+
+## Available poses (characters/cut)
+- mahtab: waving with one hand, medical bag in the other
+- mahtab-walk: standing with the medical bag, waving (use for walk-in entrances)
+- ebrahim: standing, holding a tablet to his chest
+- khonejan: waving, heart balloon, wooden door (cut-out fixed 2026-11-05)
+
+New poses come from characters/pose-backlog.json (scheduled task, Thursdays and Saturdays).
