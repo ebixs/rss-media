@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: python scripts/cf_whoami.py
         env:
+          V_CF_REEL_ACCOUNT_ID: ${{ vars.CF_REEL_ACCOUNT_ID }}
+          V_CF_REEL_API_TOKEN: ${{ vars.CF_REEL_API_TOKEN }}
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CF_REEL_ACCOUNT_ID: ${{ secrets.CF_REEL_ACCOUNT_ID }}
