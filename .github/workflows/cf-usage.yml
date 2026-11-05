@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: python scripts/cf_whoami.py
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
       - run: python scripts/cf_usage.py
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
