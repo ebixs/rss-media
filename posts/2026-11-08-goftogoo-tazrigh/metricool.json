@@ -1,0 +1,17 @@
+{
+ "post_id": 417415354,
+ "uuid": "4381967901735210894",
+ "scheduled_for": "2026-11-08T18:00:00+03:30",
+ "format": "reel (dialogue, 16 s)",
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/4ed04a14d0b892b6042881892f100889c41f6ccf/posts/2026-11-08-goftogoo-tazrigh/reel.mp4",
+ "review": {
+  "hookscore": "52.9 OK, The Verbatim Question",
+  "caption_lint": "READY except WARN search terms (پرستار در منزل is in the hashtags only)",
+  "human_score": 60.8,
+  "medical_review": "passed: injection only with a doctor's prescription; 115 for allergy signs",
+  "video": "owner approved the dialogue reel on 2026-11-05 (Khonejan cut-out fixed)"
+ },
+ "note": "made by hand on 2026-11-05 and approved by the owner; the Sunday task sees this post_id and does not make another",
+ "telegram": "not sent (Telegram is Wednesdays)",
+ "result": "pending"
+}
