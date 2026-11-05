@@ -24,7 +24,9 @@ def small_png(path: pathlib.Path) -> bytes:
 
 
 def run(prompt: str, refs: list[pathlib.Path], w: int, h: int, seed: int) -> bytes:
-    url = f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CF_ACCOUNT_ID']}/ai/run/{MODEL}"
+    acc = os.environ.get("CF_REEL_ACCOUNT_ID") or os.environ["CF_ACCOUNT_ID"]
+    tok = os.environ.get("CF_REEL_API_TOKEN") or os.environ["CF_API_TOKEN"]
+    url = f"https://api.cloudflare.com/client/v4/accounts/{acc.strip()}/ai/run/{MODEL}"
     b = uuid.uuid4().hex
     parts = [f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode()
              for k, v in {"prompt": prompt[:2048], "width": w, "height": h, "seed": seed}.items()]
@@ -33,7 +35,7 @@ def run(prompt: str, refs: list[pathlib.Path], w: int, h: int, seed: int) -> byt
                      f'Content-Type: image/png\r\n\r\n'.encode() + small_png(r) + b"\r\n")
     parts.append(f"--{b}--\r\n".encode())
     req = urllib.request.Request(url, data=b"".join(parts), headers={
-        "Authorization": f"Bearer {os.environ['CF_API_TOKEN']}", "Content-Type": f"multipart/form-data; boundary={b}"})
+        "Authorization": f"Bearer {tok.strip()}", "Content-Type": f"multipart/form-data; boundary={b}"})
     try:
         with urllib.request.urlopen(req, timeout=180) as resp:
             raw, ctype = resp.read(), resp.headers.get("Content-Type", "")

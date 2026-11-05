@@ -78,9 +78,22 @@ CAMPAIGN_STYLE = (
 )
 
 
+# Owner's choice (2026-11-05): reels and character images use a second Cloudflare account
+# (secrets CF_REEL_ACCOUNT_ID / CF_REEL_API_TOKEN); photo posts stay on the first one.
+# If the reel account is not set, everything uses the first account.
+CREDS = {"account": "CF_ACCOUNT_ID", "token": "CF_API_TOKEN"}
+
+
+def use_reel_account(on: bool) -> None:
+    if on and os.environ.get("CF_REEL_ACCOUNT_ID") and os.environ.get("CF_REEL_API_TOKEN"):
+        CREDS.update(account="CF_REEL_ACCOUNT_ID", token="CF_REEL_API_TOKEN")
+    else:
+        CREDS.update(account="CF_ACCOUNT_ID", token="CF_API_TOKEN")
+
+
 def run_model(model: str, kind: str, extra: dict, prompt: str, seed: int) -> bytes:
-    url = f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CF_ACCOUNT_ID']}/ai/run/{model}"
-    headers = {"Authorization": f"Bearer {os.environ['CF_API_TOKEN']}"}
+    url = f"https://api.cloudflare.com/client/v4/accounts/{os.environ[CREDS['account']].strip()}/ai/run/{model}"
+    headers = {"Authorization": f"Bearer {os.environ[CREDS['token']].strip()}"}
     fields = {"prompt": prompt[:2048], "seed": seed, **extra}
     if kind == "json":
         body = json.dumps(fields).encode()
@@ -135,6 +148,7 @@ def process(post_dir: pathlib.Path) -> dict:
     if not prompt:
         return {"ok": False, "error": "image_prompt is missing in post.md"}
     is_reel = meta.get("format", "").strip() == "reel"
+    use_reel_account(is_reel)
     count = 3 if is_reel else max(1, min(3, int(meta.get("candidates", "2") or 2)))
     style = CAMPAIGN_STYLE if meta.get("style", "").strip() == "campaign" else STYLE
     base_seed = int.from_bytes(os.urandom(3), "big")
@@ -145,8 +159,17 @@ def process(post_dir: pathlib.Path) -> dict:
         try:
             data, model, errs = generate(full, base_seed + n * 7919, vertical=is_reel)
         except RuntimeError as err:
-            errors.append(str(err))
-            continue
+            if is_reel and CREDS["account"] == "CF_REEL_ACCOUNT_ID":
+                errors.append(f"reel account failed, main account used: {err}"[:300])
+                use_reel_account(False)
+                try:
+                    data, model, errs = generate(full, base_seed + n * 7919, vertical=True)
+                except RuntimeError as err2:
+                    errors.append(str(err2))
+                    continue
+            else:
+                errors.append(str(err))
+                continue
         errors += errs
         (post_dir / f"background-{n}.jpg").write_bytes(data)
         if not is_reel:

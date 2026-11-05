@@ -1,12 +1,12 @@
 """Print Workers AI usage (neurons per hour and model) for the last 3 days. Read-only."""
 import json, os, urllib.request, datetime as dt
-since = (dt.datetime.utcnow() - dt.timedelta(days=3)).strftime("%Y-%m-%dT%H:00:00Z")
+since = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(days=3)).strftime("%Y-%m-%dT%H:00:00Z")
 q = """query($a:String!,$s:Time!){viewer{accounts(filter:{accountTag:$a}){
  aiInferenceAdaptiveGroups(limit:500, filter:{datetimeHour_geq:$s}, orderBy:[datetimeHour_ASC]){
   count sum{totalNeurons} dimensions{datetimeHour modelId}}}}}"""
 req = urllib.request.Request("https://api.cloudflare.com/client/v4/graphql",
-    data=json.dumps({"query": q, "variables": {"a": os.environ["CF_ACCOUNT_ID"], "s": since}}).encode(),
-    headers={"Authorization": f"Bearer {os.environ['CF_API_TOKEN']}", "Content-Type": "application/json"})
+    data=json.dumps({"query": q, "variables": {"a": (os.environ.get("CF_REEL_ACCOUNT_ID") or os.environ["CF_ACCOUNT_ID"]).strip(), "s": since}}).encode(),
+    headers={"Authorization": f"Bearer {(os.environ.get('CF_REEL_API_TOKEN') or os.environ['CF_API_TOKEN']).strip()}", "Content-Type": "application/json"})
 try:
     r = json.load(urllib.request.urlopen(req, timeout=60))
 except urllib.error.HTTPError as e:
