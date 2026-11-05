@@ -24,8 +24,17 @@ def small_png(path: pathlib.Path) -> bytes:
 
 
 def run(prompt: str, refs: list[pathlib.Path], w: int, h: int, seed: int) -> bytes:
-    acc = os.environ.get("CF_REEL_ACCOUNT_ID") or os.environ["CF_ACCOUNT_ID"]
-    tok = os.environ.get("CF_REEL_API_TOKEN") or os.environ["CF_API_TOKEN"]
+    try:
+        return run_on(prompt, refs, w, h, seed, os.environ.get("CF_REEL_ACCOUNT_ID") or os.environ["CF_ACCOUNT_ID"],
+                      os.environ.get("CF_REEL_API_TOKEN") or os.environ["CF_API_TOKEN"])
+    except RuntimeError as err:
+        if "429" not in str(err) or not os.environ.get("CF_REEL_ACCOUNT_ID"):
+            raise
+        print("reel account quota used up; using the main account")
+        return run_on(prompt, refs, w, h, seed, os.environ["CF_ACCOUNT_ID"], os.environ["CF_API_TOKEN"])
+
+
+def run_on(prompt, refs, w, h, seed, acc, tok) -> bytes:
     url = f"https://api.cloudflare.com/client/v4/accounts/{acc.strip()}/ai/run/{MODEL}"
     b = uuid.uuid4().hex
     parts = [f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n'.encode()
