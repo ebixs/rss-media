@@ -32,21 +32,42 @@
   ]
  },
  {
-  "id": "bg-street",
-  "prompt": "A quiet cozy Tehran residential alley at dusk, warm lit windows, plane trees, potted geraniums, small parked scooter, Alborz mountains softly in the far background. high-quality 3D animated feature film background plate, stylized like modern family animation movies, soft global illumination, warm cinematic light, colour palette of navy, ivory, mint green and warm gold, vertical 9:16 composition, empty scene with NO people and NO characters, open floor space in the middle and lower part of the frame for characters to stand, no text, no letters, no signs, no logos",
-  "width": 864,
-  "height": 1536,
+  "id": "pose-khonejan-worried",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, looking worried and sad, both gloved hands pressed to its cheeks, eyebrows raised in concern, no balloon. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/khonejan.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
   "seeds": [
-   5
-  ]
+   892
+  ],
+  "cut": "khonejan-worried"
  },
  {
-  "id": "bg-door",
-  "prompt": "The cozy entrance of a Tehran apartment building at warm evening light, a wooden front door with a doorbell panel without any writing, plants in pots, two steps, warm wall lamps. high-quality 3D animated feature film background plate, stylized like modern family animation movies, soft global illumination, warm cinematic light, colour palette of navy, ivory, mint green and warm gold, vertical 9:16 composition, empty scene with NO people and NO characters, open floor space in the middle and lower part of the frame for characters to stand, no text, no letters, no signs, no logos",
-  "width": 864,
-  "height": 1536,
+  "id": "pose-mahtab-phone",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, smiling and talking on a plain mobile phone held to her ear, other hand relaxed, medical bag on the floor beside her. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/mahtab.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
   "seeds": [
-   5
-  ]
+   753
+  ],
+  "cut": "mahtab-phone"
+ },
+ {
+  "id": "pose-ebrahim-thumbsup",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, smiling warmly and giving a thumbs up with his right hand, tablet held in the left hand at his side. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/ebrahim.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   761
+  ],
+  "cut": "ebrahim-thumbsup"
  }
 ]

@@ -1,0 +1,20 @@
+[
+ {
+  "id": "bg-street",
+  "prompt": "A quiet cozy Tehran residential alley at dusk, warm lit windows, plane trees, potted geraniums, small parked scooter, Alborz mountains softly in the far background. high-quality 3D animated feature film background plate, stylized like modern family animation movies, soft global illumination, warm cinematic light, colour palette of navy, ivory, mint green and warm gold, vertical 9:16 composition, empty scene with NO people and NO characters, open floor space in the middle and lower part of the frame for characters to stand, no text, no letters, no signs, no logos",
+  "width": 864,
+  "height": 1536,
+  "seeds": [
+   5
+  ]
+ },
+ {
+  "id": "bg-door",
+  "prompt": "The cozy entrance of a Tehran apartment building at warm evening light, a wooden front door with a doorbell panel without any writing, plants in pots, two steps, warm wall lamps. high-quality 3D animated feature film background plate, stylized like modern family animation movies, soft global illumination, warm cinematic light, colour palette of navy, ivory, mint green and warm gold, vertical 9:16 composition, empty scene with NO people and NO characters, open floor space in the middle and lower part of the frame for characters to stand, no text, no letters, no signs, no logos",
+  "width": 864,
+  "height": 1536,
+  "seeds": [
+   5
+  ]
+ }
+]
