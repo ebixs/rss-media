@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "candidates": [
+    "final-1.jpg",
+    "final-2.jpg"
+  ],
+  "models": [
+    "lucid-origin",
+    "flux-2-klein-9b"
+  ],
+  "errors": [
+    "@cf/black-forest-labs/flux-2-klein-9b: HTTP 500: {\"errors\":[{\"message\":\"AiError: AiError: Internal server error (b04108ef-8172-4bc1-b79a-ebf4d06e43df)\",\"code\":3043}],\"success\":false,\"result\":{},\"messages\":[]}"
+  ]
+}
