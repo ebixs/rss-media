@@ -1,0 +1,18 @@
+{
+ "post_id": 424050987,
+ "uuid": "-8413697404901177389",
+ "scheduled_for": "2026-11-11T18:00:00+03:30",
+ "format": "post",
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/17329b167de6174a405ae29aa0bcb8cfd0768188/posts/2026-11-11-feshar-khoon-dorost/final.jpg",
+ "review": {
+  "hookscore": "76.4 STRONG, Negative Command (weakest STAKES 70)",
+  "caption_lint": "REVIEW: only WARN is ONE ASK (save + mandated fixed phone footer line); no FAIL; search terms 2/2",
+  "human_score": 72.6,
+  "slop_density": 100,
+  "structural_tells": "1 flagged: the mandated footer line 📞",
+  "medical_review": "passed",
+  "images_or_frames": "contact sheet of 2 candidates; final-2 chosen (natural hands/faces, clean cuff, no garbled text); final-1 rejected (awkward posture, cord tangle)"
+ },
+ "telegram": "queued 2026-11-11T1430Z",
+ "result": "pending"
+}
