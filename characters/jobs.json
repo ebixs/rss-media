@@ -84,29 +84,29 @@
   "cut": "mahtab-explain"
  },
  {
-  "id": "pose-khonejan-happy",
-  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, jumping for joy with both gloved arms raised high, big happy smile, door slightly open, red heart balloon floating above. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
-  "refs": [
-   "characters/ref/khonejan.jpg"
-  ],
-  "width": 1024,
-  "height": 1024,
-  "seeds": [
-   360
-  ],
-  "cut": "khonejan-happy"
- },
- {
-  "id": "pose-ebrahim-point",
-  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, pointing up and to the side with his index finger as if showing something important, confident friendly smile. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "id": "pose-ebrahim-explain",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, explaining calmly with both open hands in front of his chest, attentive kind expression, tablet tucked under his arm. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
   "refs": [
    "characters/ref/ebrahim.jpg"
   ],
   "width": 1024,
   "height": 1024,
   "seeds": [
-   898
+   923
   ],
-  "cut": "ebrahim-point"
+  "cut": "ebrahim-explain"
+ },
+ {
+  "id": "pose-khonejan-thinking",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, thinking, one gloved hand on its chin, eyes looking up, small question-like curious expression, no balloon. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/khonejan.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   20
+  ],
+  "cut": "khonejan-thinking"
  }
 ]
