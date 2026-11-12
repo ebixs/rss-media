@@ -95,18 +95,5 @@
    883
   ],
   "cut": "ebrahim-explain"
- },
- {
-  "id": "pose-khonejan-thinking",
-  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, thinking, one gloved hand on its chin, eyes looking up, small question-like curious expression, no balloon. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
-  "refs": [
-   "characters/ref/khonejan.jpg"
-  ],
-  "width": 1024,
-  "height": 1024,
-  "seeds": [
-   209
-  ],
-  "cut": "khonejan-thinking"
  }
 ]

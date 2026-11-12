@@ -20,6 +20,8 @@ Rules: no text in images; never a real patient; medical scenes stay safe (no nee
 - mahtab-phone: smiling, talking on a mobile phone held to her ear (booking / call scenes)
 - ebrahim: standing, holding a tablet to his chest
 - ebrahim-thumbsup: smiling, thumbs up, tablet in the other hand (approval / "done")
+- mahtab-explain: smiling, one open palm raised to the side, no bag (explaining / offering info)
+- ebrahim-explain: calm, both open hands in front of chest, tablet under arm (explaining)
 - khonejan: waving, heart balloon, stethoscope, wooden door (re-cut 2026-11-07: chimney and balloon string now complete; old cut in cut/archive)
 - khonejan-worried: worried, gloved hands on its cheeks, no balloon (problem / opening scenes; use with "mood": "worried")
 
