@@ -69,5 +69,44 @@
    761
   ],
   "cut": "ebrahim-thumbsup"
+ },
+ {
+  "id": "pose-mahtab-explain",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, explaining kindly with one open palm raised to the side at chest height, friendly smile, no bag. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/mahtab.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   342
+  ],
+  "cut": "mahtab-explain"
+ },
+ {
+  "id": "pose-khonejan-happy",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, jumping for joy with both gloved arms raised high, big happy smile, door slightly open, red heart balloon floating above. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/khonejan.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   646
+  ],
+  "cut": "khonejan-happy"
+ },
+ {
+  "id": "pose-ebrahim-point",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, pointing up and to the side with his index finger as if showing something important, confident friendly smile. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/ebrahim.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   301
+  ],
+  "cut": "ebrahim-point"
  }
 ]
