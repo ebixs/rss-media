@@ -1,0 +1,18 @@
+{
+ "post_id": 428632356,
+ "uuid": "867776661788444948",
+ "scheduled_for": "2026-11-15T18:00:00+03:30",
+ "format": "reel (dialogue, 38 s)",
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/715457fd1f48ac0b55d630cdfa8e63bed3d3d724/posts/2026-11-15-panj-az-jarahi/reel.mp4",
+ "episode": 2,
+ "experiment": "variable = hook formula (Numbered With A Favourite) + checklist, 38 s; hypothesis = withheld third item raises retention and shares vs episode 1 question hook",
+ "review": {
+  "hookscore": "73.6 STRONG, Numbered With A Favourite",
+  "caption_lint": "REVIEW: only WARN ONE ASK (mandated phone line + the share ask); first line 70 chars, 3 hashtags, search terms present",
+  "human_score": 60.1,
+  "medical_review": "passed: general checks only, no dose or diagnosis, 115 for breathing difficulty, chest pain, uncontrolled bleeding; educational line present",
+  "images_or_frames": "one contact sheet of 6 frames plus checklist frame at 21.8 s; duration 38.0 s; no clipping, bubbles clear of faces, backgrounds empty"
+ },
+ "telegram": "not sent (Telegram is Wednesdays)",
+ "result": "pending"
+}
