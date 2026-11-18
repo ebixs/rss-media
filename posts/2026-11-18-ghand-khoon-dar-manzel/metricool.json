@@ -1,0 +1,17 @@
+{
+ "post_id": 432431347,
+ "uuid": "1959641430592996008",
+ "scheduled_for": "2026-11-18T18:00:00+03:30",
+ "format": "reel (dialogue, 38 s)",
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/3071baa6b520429bb9689c252630939ae8ebef36/posts/2026-11-18-ghand-khoon-dar-manzel/reel.mp4",
+ "episode": 3,
+ "experiment": "variable = hook formula (The Callout aimed at a diabetic parent's family + number) vs episode 2 numbered hook; checklist and 38 s kept; hypothesis = callout raises 3-second view rate and shares",
+ "review": {
+  "hookscore": "54.2 OK, The Callout (top of 3 candidates)",
+  "caption_lint": "READY; WARN only on search terms in visible window and mandated phone line + one share ask",
+  "human_score": 64.1,
+  "medical_review": "passed: no diagnosis, dose or numbers; result interpretation and drug changes left to the doctor; 115 for confusion, cold sweat, severe weakness; educational line present",
+  "images_or_frames": "one contact sheet of 6 frames; duration 38.0 s; no clipping, bubbles clear of faces, backgrounds empty; minor: mascot stands on the kitchen table in scene 1"
+ },
+ "result": "pending"
+}
