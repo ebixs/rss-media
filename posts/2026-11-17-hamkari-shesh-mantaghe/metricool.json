@@ -1,22 +1,24 @@
 {
- "post_id": 431047183,
- "uuid": "3383384689643177192",
- "scheduled_for": "2026-11-17T18:00:00+03:30",
- "media_urls": [
-  "https://raw.githubusercontent.com/ebixs/rss-media/8a03bc76a2b4b2c9fec2d8d20060bd2616a6a24f/posts/2026-11-17-hamkari-shesh-mantaghe/final-2.jpg",
-  "https://raw.githubusercontent.com/ebixs/rss-media/8a03bc76a2b4b2c9fec2d8d20060bd2616a6a24f/posts/2026-11-17-hamkari-shesh-mantaghe/final-3.jpg"
- ],
- "format": "carousel of 2",
- "review": {
-  "hookscore": "54.3 OK, The Callout",
-  "caption_lint": "READY (all PASS)",
-  "human_score": 63.1,
-  "slop_density": 100,
-  "structural_tells": "1 flagged: mandated footer 📞 line",
-  "legal_review": "passed",
-  "images": "final-2 (bridge, cover), final-3 (alley) passed; final-1 rejected: compass shows letters N/W (text in photo)"
- },
- "note": "every-two-weeks nurse recruitment call; not chosen by the learning loop",
- "telegram": "not sent (Telegram stays once a week)",
- "result": "pending"
+  "post_id": 431047183,
+  "uuid": "3383384689643177192",
+  "scheduled_for": "2026-11-17T18:00:00+03:30",
+  "media_urls": [
+    "https://raw.githubusercontent.com/ebixs/rss-media/8a03bc76a2b4b2c9fec2d8d20060bd2616a6a24f/posts/2026-11-17-hamkari-shesh-mantaghe/final-2.jpg",
+    "https://raw.githubusercontent.com/ebixs/rss-media/8a03bc76a2b4b2c9fec2d8d20060bd2616a6a24f/posts/2026-11-17-hamkari-shesh-mantaghe/final-3.jpg"
+  ],
+  "format": "carousel of 2",
+  "review": {
+    "hookscore": "54.3 OK, The Callout",
+    "caption_lint": "READY (all PASS)",
+    "human_score": 63.1,
+    "slop_density": 100,
+    "structural_tells": "1 flagged: mandated footer 📞 line",
+    "legal_review": "passed",
+    "images": "final-2 (bridge, cover), final-3 (alley) passed; final-1 rejected: compass shows letters N/W (text in photo)"
+  },
+  "note": "every-two-weeks nurse recruitment call; not chosen by the learning loop",
+  "telegram": "not sent (Telegram stays once a week)",
+  "result": "PUBLISHED",
+  "instagram_url": "https://www.instagram.com/p/Df2Jqz9CMFm/",
+  "checked_at": "2026-11-18T20:59:08+03:30"
 }
