@@ -24,6 +24,9 @@ Rules: no text in images; never a real patient; medical scenes stay safe (no nee
 - ebrahim-explain: calm, both open hands in front of chest, tablet under arm (explaining)
 - khonejan: waving, heart balloon, stethoscope, wooden door (re-cut 2026-11-07: chimney and balloon string now complete; old cut in cut/archive)
 - khonejan-worried: worried, gloved hands on its cheeks, no balloon (problem / opening scenes; use with "mood": "worried")
+- khonejan-happy: jumping for joy, both gloved arms raised, door open like a smile, heart balloon (celebration / success; stethoscope not visible in this one)
+- ebrahim-point: smiling, pointing up and to the side with his index finger (showing an important point)
+- mahtab-clipboard: smiling, holding a blank clipboard against her chest (checklists / information scenes)
 
 Older versions of replaced cut-outs live in characters/cut/archive (not used by the reels).
 Quality notes per run: characters/quality-log.md.
