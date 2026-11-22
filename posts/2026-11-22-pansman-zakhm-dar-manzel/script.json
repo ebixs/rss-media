@@ -1,0 +1,205 @@
+{
+ "total": 40.0,
+ "end_at": 36.5,
+ "seed": 21,
+ "scenes": [
+  {
+   "start": 0,
+   "end": 5.6,
+   "bg": "room",
+   "bg_prompt": "Empty cozy 3D animated-film Tehran apartment living room, sofa with a folded blanket, soft afternoon window light, no people, no text",
+   "actors": [
+    {
+     "name": "khonejan",
+     "x": 540,
+     "h": 980,
+     "enter": "pop",
+     "at": 0.2,
+     "mood": "worried"
+    }
+   ],
+   "lines": [
+    {
+     "who": "khonejan",
+     "text": "پانسمان زخم پدرت رو با پنبه نپوشون! ۳ تا اشتباه هست که همه می‌کنن.",
+     "at": 0.6,
+     "dur": 4.8
+    }
+   ],
+   "props": [
+    {
+     "icon": "calendar",
+     "x": 790,
+     "y": 600,
+     "at": 2.0,
+     "size": 170
+    }
+   ]
+  },
+  {
+   "start": 5.6,
+   "end": 13.8,
+   "bg": "door",
+   "bg_prompt": "Empty 3D animated-film Tehran apartment building entrance, wooden front door, warm hallway light, small potted plant, no people, no text",
+   "actors": [
+    {
+     "name": "khonejan",
+     "x": 790,
+     "h": 760,
+     "enter": "none",
+     "at": 5.6,
+     "hops": [
+      11.2
+     ]
+    },
+    {
+     "name": "mahtab-walk",
+     "x": 320,
+     "h": 960,
+     "enter": "walk-left",
+     "at": 5.8
+    }
+   ],
+   "lines": [
+    {
+     "who": "mahtab-walk",
+     "text": "پانسمان رو ما تو خونه عوض می‌کنیم. این ۳ تا رو یادت باشه.",
+     "at": 6.4,
+     "dur": 4.5
+    },
+    {
+     "who": "khonejan",
+     "text": "بگو ببینم، چی نباید بکنم؟",
+     "at": 11.2,
+     "dur": 2.5,
+     "hop": true
+    }
+   ],
+   "sfx": [
+    {
+     "kind": "ding",
+     "at": 6.0
+    }
+   ]
+  },
+  {
+   "start": 13.8,
+   "end": 23.6,
+   "bg": "room",
+   "bg_prompt": "Empty 3D animated-film Tehran apartment dining table corner with a small tray holding plain white gauze rolls, bright window light, no people, no text, no labels",
+   "title": "۳ اشتباه پانسمان",
+   "items": [
+    "بدون شستن دست، به پانسمان دست نزنید",
+    "پنبهٔ معمولی را روی زخم باز نگذارید",
+    "خمیردندان و پودر و داروی خانگی نریزید"
+   ],
+   "items_at": 14.6,
+   "items_step": 2.6,
+   "actors": [
+    {
+     "name": "mahtab-explain",
+     "x": 800,
+     "h": 640,
+     "enter": "pop",
+     "at": 14.0
+    }
+   ],
+   "props": [
+    {
+     "icon": "check",
+     "x": 110,
+     "y": 1200,
+     "at": 14.8,
+     "size": 160
+    }
+   ]
+  },
+  {
+   "start": 23.6,
+   "end": 31.0,
+   "bg": "door",
+   "bg_prompt": "Empty 3D animated-film Tehran apartment stairwell landing with warm light, potted plant, no people, no text",
+   "actors": [
+    {
+     "name": "ebrahim",
+     "x": 780,
+     "h": 980,
+     "enter": "pop",
+     "at": 23.8
+    },
+    {
+     "name": "khonejan",
+     "x": 300,
+     "h": 720,
+     "enter": "none",
+     "at": 23.6,
+     "hops": [
+      28.9
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "who": "ebrahim",
+     "text": "چرک، تب یا قرمزی زیاد؟ زود خبر بدید. خونریزی بند نیومد؟ ۱۱۵.",
+     "at": 24.2,
+     "dur": 4.5
+    },
+    {
+     "who": "khonejan",
+     "text": "خیالم راحت شد!",
+     "at": 28.9,
+     "dur": 2.0
+    }
+   ],
+   "props": [
+    {
+     "icon": "phone",
+     "x": 470,
+     "y": 620,
+     "at": 25.0,
+     "size": 150
+    }
+   ]
+  },
+  {
+   "start": 31.0,
+   "end": 36.5,
+   "bg": "street",
+   "bg_prompt": "Empty quiet 3D animated-film Tehran alley at golden hour, plane trees, parked bicycle, no people, no text",
+   "actors": [
+    {
+     "name": "mahtab",
+     "x": 300,
+     "h": 900,
+     "enter": "none",
+     "at": 31.0
+    },
+    {
+     "name": "ebrahim",
+     "x": 780,
+     "h": 940,
+     "enter": "none",
+     "at": 31.0
+    }
+   ],
+   "lines": [
+    {
+     "who": "mahtab",
+     "text": "این رو برای کسی بفرست که پانسمان زخم مامانش با خودشه.",
+     "at": 31.4,
+     "dur": 4.4
+    }
+   ],
+   "props": [
+    {
+     "icon": "heart",
+     "x": 470,
+     "y": 520,
+     "at": 32.5,
+     "size": 150
+    }
+   ]
+  }
+ ]
+}
