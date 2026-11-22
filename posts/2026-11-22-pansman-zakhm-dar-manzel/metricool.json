@@ -1,0 +1,17 @@
+{
+  "post_id": 437307708,
+  "uuid": "-3183920064238108618",
+  "scheduled_for": "2026-11-22T18:00:00+03:30",
+  "format": "reel (dialogue, 40 s)",
+  "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/a0688a1638a5c50bcc2818e91200b659501c6f89/posts/2026-11-22-pansman-zakhm-dar-manzel/reel.mp4",
+  "episode": 4,
+  "experiment": "variable = hook formula (Negative Command) vs episode 2 numbered and episode 3 callout; checklist and ~40 s kept; hypothesis = an imperative don't-do-this hook raises shares and saves",
+  "review": {
+    "hookscore": "59.1 OK, Negative Command (top of 3 candidates)",
+    "caption_lint": "REVIEW: only WARN is two asks = mandated phone line + one share ask (same as ep3); first line 93 chars; 3 hashtags; no link",
+    "human_score": 68.2,
+    "medical_review": "passed: no diagnosis, dose or product claims; standard first-aid cautions only; doctor/nurse for redness, pus, fever; 115 for uncontrolled bleeding; educational line present",
+    "images_or_frames": "one contact sheet of 6 frames; duration 40.0 s; no clipping, bubbles clear of faces, backgrounds empty; minor: nurse small on table in checklist scene"
+  },
+  "result": "pending"
+}
