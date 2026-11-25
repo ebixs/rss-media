@@ -27,6 +27,8 @@ Rules: no text in images; never a real patient; medical scenes stay safe (no nee
 - khonejan-happy: jumping for joy, both gloved arms raised, door open like a smile, heart balloon (celebration / success; stethoscope not visible in this one)
 - ebrahim-point: smiling, pointing up and to the side with his index finger (showing an important point)
 - mahtab-clipboard: smiling, holding a blank clipboard against her chest (checklists / information scenes)
+- khonejan-thinking: one gloved hand on its chin, eyes looking up, curious (thinking / question scenes; left wall edge slightly rough in the cut)
+- ebrahim-walk: walking briskly in side three-quarter view carrying the navy medical bag (entrances / arrival scenes)
 
 Older versions of replaced cut-outs live in characters/cut/archive (not used by the reels).
 Quality notes per run: characters/quality-log.md.
