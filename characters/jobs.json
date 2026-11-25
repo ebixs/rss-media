@@ -244,5 +244,33 @@
   "seeds": [
    77
   ]
+ },
+ {
+  "id": "concept-serum-set",
+  "prompt": "Photorealistic product photograph on a pure seamless white background, soft even studio light, gentle soft shadow under the object, sharp focus, true-to-life colours, medically accurate, no text, no letters, no logo, no labels with writing, a standard hospital IV infusion set hanging straight down: a clear transparent soft plastic IV fluid bag with clear liquid, connected at its bottom port to a clear drip chamber partly filled with liquid, then a long clear thin tube going straight down through a white plastic roller clamp, all parts physically connected in one continuous line, vertical composition, the whole set centered with empty white space around",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   131,
+   262
+  ]
+ },
+ {
+  "id": "concept-serum-chamber",
+  "prompt": "Photorealistic product photograph on a pure seamless white background, soft even studio light, gentle soft shadow under the object, sharp focus, true-to-life colours, medically accurate, no text, no letters, no logo, no labels with writing, extreme close-up macro of a clear transparent IV drip chamber, a single clear drop of liquid forming at the top needle inside the chamber, liquid pooled at the bottom half, clear tube continuing from the bottom, centered, vertical composition",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   131
+  ]
+ },
+ {
+  "id": "concept-serum-clamp",
+  "prompt": "Photorealistic product photograph on a pure seamless white background, soft even studio light, gentle soft shadow under the object, sharp focus, true-to-life colours, medically accurate, no text, no letters, no logo, no labels with writing, close-up of a white plastic IV roller clamp on a clear thin tube, the small round roller wheel visible inside the clamp housing, a fingertip gently resting on the wheel, natural hand with five fingers, centered, vertical composition",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   131
+  ]
  }
 ]
