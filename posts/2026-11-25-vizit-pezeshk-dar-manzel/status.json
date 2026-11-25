@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "format": "dialogue",
+  "engine": "cartoon",
+  "backgrounds_made": 5,
+  "candidates": [
+    "reel.mp4",
+    "cover.jpg",
+    "frame-1.jpg",
+    "frame-2.jpg",
+    "frame-3.jpg",
+    "frame-4.jpg",
+    "frame-5.jpg",
+    "frame-6.jpg"
+  ],
+  "seconds": 40.0,
+  "errors": []
+}
