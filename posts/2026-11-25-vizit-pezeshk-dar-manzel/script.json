@@ -1,0 +1,205 @@
+{
+ "total": 40.0,
+ "end_at": 36.5,
+ "seed": 25,
+ "scenes": [
+  {
+   "start": 0,
+   "end": 5.0,
+   "bg": "room",
+   "bg_prompt": "Empty 3D animated-film cozy Tehran apartment living room, armchair with a folded blanket and a walking cane leaning on it, soft window light, no people, no text, no labels",
+   "actors": [
+    {
+     "name": "khonejan",
+     "x": 540,
+     "h": 980,
+     "enter": "pop",
+     "at": 0.2,
+     "mood": "worried"
+    }
+   ],
+   "lines": [
+    {
+     "who": "khonejan",
+     "text": "مامانم تا مطب راه نمیره! دکتر تا خونه میاد؟",
+     "at": 0.5,
+     "dur": 3.8
+    }
+   ],
+   "props": [
+    {
+     "icon": "phone",
+     "x": 790,
+     "y": 600,
+     "at": 2.0,
+     "size": 170
+    }
+   ]
+  },
+  {
+   "start": 5.0,
+   "end": 12.4,
+   "bg": "door",
+   "bg_prompt": "Empty 3D animated-film Tehran apartment building entrance, wooden front door, shoe rack, warm hallway light, no people, no text, no labels",
+   "actors": [
+    {
+     "name": "khonejan",
+     "x": 790,
+     "h": 760,
+     "enter": "none",
+     "at": 5.0,
+     "hops": [
+      9.6
+     ]
+    },
+    {
+     "name": "mahtab-walk",
+     "x": 320,
+     "h": 960,
+     "enter": "walk-left",
+     "at": 5.2
+    }
+   ],
+   "lines": [
+    {
+     "who": "mahtab-walk",
+     "text": "آره! پزشک عمومی میاد خونه‌تون و معاینه می‌کنه.",
+     "at": 5.8,
+     "dur": 3.5
+    },
+    {
+     "who": "khonejan",
+     "text": "پس من چی آماده کنم؟",
+     "at": 9.6,
+     "dur": 2.4,
+     "hop": true
+    }
+   ],
+   "sfx": [
+    {
+     "kind": "ding",
+     "at": 5.5
+    }
+   ]
+  },
+  {
+   "start": 12.4,
+   "end": 23.4,
+   "bg": "room",
+   "bg_prompt": "Empty 3D animated-film Tehran apartment dining table corner with a blank notepad and a glass of tea, bright window light, no people, no text, no labels",
+   "title": "قبل از آمدن پزشک",
+   "items": [
+    "فهرست داروهایی که مصرف می‌کند",
+    "جواب آزمایش و برگهٔ ویزیت قبلی",
+    "یادداشت: از کی و چه علائمی دارد"
+   ],
+   "items_at": 13.4,
+   "items_step": 2.8,
+   "actors": [
+    {
+     "name": "mahtab-clipboard",
+     "x": 800,
+     "h": 640,
+     "enter": "pop",
+     "at": 12.6
+    }
+   ],
+   "props": [
+    {
+     "icon": "prescription",
+     "x": 110,
+     "y": 1200,
+     "at": 13.6,
+     "size": 160
+    }
+   ]
+  },
+  {
+   "start": 23.4,
+   "end": 31.0,
+   "bg": "door",
+   "bg_prompt": "Empty 3D animated-film Tehran apartment stairwell landing with warm light and a potted plant, no people, no text, no labels",
+   "actors": [
+    {
+     "name": "ebrahim",
+     "x": 780,
+     "h": 980,
+     "enter": "pop",
+     "at": 23.6
+    },
+    {
+     "name": "khonejan",
+     "x": 300,
+     "h": 720,
+     "enter": "none",
+     "at": 23.4,
+     "hops": [
+      28.6
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "who": "ebrahim",
+     "text": "درد قفسهٔ سینه، تنگی نفس یا بیهوشی؟ ویزیت نه، فوراً ۱۱۵.",
+     "at": 24.0,
+     "dur": 4.4
+    },
+    {
+     "who": "khonejan",
+     "text": "خیالم راحت شد!",
+     "at": 28.6,
+     "dur": 2.0
+    }
+   ],
+   "props": [
+    {
+     "icon": "phone",
+     "x": 470,
+     "y": 620,
+     "at": 24.8,
+     "size": 150
+    }
+   ]
+  },
+  {
+   "start": 31.0,
+   "end": 36.5,
+   "bg": "street",
+   "bg_prompt": "Empty 3D animated-film quiet Tehran alley at golden hour, plane trees, parked bicycle, no people, no text, no labels",
+   "actors": [
+    {
+     "name": "mahtab",
+     "x": 300,
+     "h": 900,
+     "enter": "none",
+     "at": 31.0
+    },
+    {
+     "name": "ebrahim",
+     "x": 780,
+     "h": 940,
+     "enter": "none",
+     "at": 31.0
+    }
+   ],
+   "lines": [
+    {
+     "who": "mahtab",
+     "text": "این رو برای کسی بفرست که مامانش تا مطب راه نمیره.",
+     "at": 31.4,
+     "dur": 4.4
+    }
+   ],
+   "props": [
+    {
+     "icon": "heart",
+     "x": 470,
+     "y": 520,
+     "at": 32.5,
+     "size": 150
+    }
+   ]
+  }
+ ]
+}
