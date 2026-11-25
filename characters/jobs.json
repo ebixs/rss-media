@@ -199,5 +199,50 @@
    310
   ],
   "cut": "mahtab-doorbell"
+ },
+ {
+  "id": "style-story-a-painterly",
+  "prompt": "Cinematic 2.5D painterly animated film still, hand-painted textures, soft brush strokes, dramatic warm and teal lighting, film grain, shallow depth of field. a young Iranian home nurse in a navy uniform with a chic loosely draped soft grey scarf, carrying a navy medical bag, standing at the door of a Tehran apartment on a rainy night, about to ring the bell, warm golden light spilling from the door gap, wet stairwell landing, rain streaks on a small window behind her with blurred city lights and Milad Tower far away, calm hopeful mood, vertical 9:16 composition, subject in the upper two thirds, natural hands with five fingers, no text, no letters, no logo",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   421
+  ]
+ },
+ {
+  "id": "style-story-b-real3d",
+  "prompt": "Cinematic realistic 3D render, feature film lighting, volumetric light, anamorphic lens look, subtle film grain, photographic depth of field. a young Iranian home nurse in a navy uniform with a chic loosely draped soft grey scarf, carrying a navy medical bag, standing at the door of a Tehran apartment on a rainy night, about to ring the bell, warm golden light spilling from the door gap, wet stairwell landing, rain streaks on a small window behind her with blurred city lights and Milad Tower far away, calm hopeful mood, vertical 9:16 composition, subject in the upper two thirds, natural hands with five fingers, no text, no letters, no logo",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   421
+  ]
+ },
+ {
+  "id": "style-story-c-papercut",
+  "prompt": "Layered paper-cut diorama, handcrafted paper layers with visible depth and soft shadows between layers, warm backlight glowing through the paper, miniature stop-motion feel, cinematic. a young Iranian home nurse in a navy uniform with a chic loosely draped soft grey scarf, carrying a navy medical bag, standing at the door of a Tehran apartment on a rainy night, about to ring the bell, warm golden light spilling from the door gap, wet stairwell landing, rain streaks on a small window behind her with blurred city lights and Milad Tower far away, calm hopeful mood, vertical 9:16 composition, subject in the upper two thirds, natural hands with five fingers, no text, no letters, no logo",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   421
+  ]
+ },
+ {
+  "id": "style-concept-a-clay3d",
+  "prompt": "A single IV drip bag with tube and a small drip chamber, soft matte clay 3D render, rounded friendly shapes, indigo (#5458DA) and white materials, soft studio light, gentle shadow, centered on a plain deep navy (#0F2D4A) background, lots of empty space, minimalist premium health app style, no text, no letters, no logo",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   77
+  ]
+ },
+ {
+  "id": "style-concept-b-flat",
+  "prompt": "A single IV drip bag with tube and a small drip chamber, clean flat vector illustration with soft long shadow and subtle gradients, indigo (#5458DA) and white, centered on a plain deep navy (#0F2D4A) background, lots of empty space, minimalist premium health app style, no text, no letters, no logo",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   77
+  ]
  }
 ]
