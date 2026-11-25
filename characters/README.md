@@ -29,6 +29,9 @@ Rules: no text in images; never a real patient; medical scenes stay safe (no nee
 - mahtab-clipboard: smiling, holding a blank clipboard against her chest (checklists / information scenes)
 - khonejan-thinking: one gloved hand on its chin, eyes looking up, curious (thinking / question scenes; left wall edge slightly rough in the cut)
 - ebrahim-walk: walking briskly in side three-quarter view carrying the navy medical bag (entrances / arrival scenes)
+- mahtab-wave-both: waving with right hand, bag in left (near-duplicate of mahtab, slightly different head tilt)
+- khonejan-surprised: eyes wide, door open like a mouth, gloved hands up beside it, heart balloon (surprise / reveal)
+- mahtab-doorbell: pressing a doorbell with one finger, bag in the other hand, three-quarter view (arrival scenes)
 
 Older versions of replaced cut-outs live in characters/cut/archive (not used by the reels).
 Quality notes per run: characters/quality-log.md.
