@@ -1,0 +1,17 @@
+{
+ "post_id": 441309173,
+ "uuid": "7862351097017353598",
+ "scheduled_for": "2026-11-25T18:00:00+03:30",
+ "format": "reel (dialogue, 40 s)",
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/4733a32525db9156e1a6892a6c1e42bac66f9e60/posts/2026-11-25-vizit-pezeshk-dar-manzel/reel.mp4",
+ "episode": 5,
+ "experiment": "variable = hook opens with a question (Verbatim Question); checklist and 40 s kept; hypothesis = question opening raises 3-second rate and retention",
+ "review": {
+  "hookscore": "66.4 OK, Verbatim Question (top of 3 candidates)",
+  "caption_lint": "REVIEW: only WARN = two asks (mandated phone line + one share ask); first line 81 chars; 3 hashtags; no link; both search terms present",
+  "human_score": 72.1,
+  "medical_review": "passed: no diagnosis/dose/time promise; checklist is document prep only; chest pain, sudden breathlessness, fainting -> 115; educational line present",
+  "images_or_frames": "one contact sheet of 6 frames; duration 40.0 s; no clipping, bubbles clear of faces, empty 3D backgrounds, readable Persian; checklist nurse small (as ep4)"
+ },
+ "result": "pending"
+}
