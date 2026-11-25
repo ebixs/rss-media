@@ -160,5 +160,44 @@
    196
   ],
   "cut": "ebrahim-walk"
+ },
+ {
+  "id": "pose-mahtab-wave-both",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, waving goodbye happily with her right hand, left hand holding the medical bag, slight head tilt. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/mahtab.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   936
+  ],
+  "cut": "mahtab-wave-both"
+ },
+ {
+  "id": "pose-khonejan-surprised",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, surprised and delighted, window-eyes wide open, door open like an open mouth, gloved hands up beside it. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/khonejan.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   200
+  ],
+  "cut": "khonejan-surprised"
+ },
+ {
+  "id": "pose-mahtab-doorbell",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, standing and pressing a plain doorbell button at the side with one finger, other hand holding the navy medical bag, friendly expectant smile, side three-quarter view. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/mahtab.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   310
+  ],
+  "cut": "mahtab-doorbell"
  }
 ]
