@@ -32,6 +32,9 @@ Rules: no text in images; never a real patient; medical scenes stay safe (no nee
 - mahtab-wave-both: waving with right hand, bag in left (near-duplicate of mahtab, slightly different head tilt)
 - khonejan-surprised: eyes wide, door open like a mouth, gloved hands up beside it, heart balloon (surprise / reveal)
 - mahtab-doorbell: pressing a doorbell with one finger, bag in the other hand, three-quarter view (arrival scenes)
+- mahtab-laugh: laughing happily with eyes crinkled, one hand on her chest, no bag (reaction / joke scenes)
+- ebrahim-relieved: eyes closed, gentle smile, hand on chest, exhaling (relief scenes; slight jagged edge at the cut-out sides)
+- khonejan-shy: shy half-closed window-eyes, rosy cheeks, one gloved hand behind its head, no balloon (shy / modest scenes)
 
 Older versions of replaced cut-outs live in characters/cut/archive (not used by the reels).
 Quality notes per run: characters/quality-log.md.
