@@ -78,5 +78,40 @@
   "name": "khonejan-shy",
   "ref": "khonejan",
   "pose": "shy, looking down with rosy cheeks, one gloved hand behind its head, no balloon"
+ },
+ {
+  "name": "mahtab-sorry",
+  "ref": "mahtab",
+  "pose": "apologetic and sorry, one hand slightly raised palm-out, gentle regretful smile, eyebrows slightly raised, no bag"
+ },
+ {
+  "name": "ebrahim-doorbell",
+  "ref": "ebrahim",
+  "pose": "standing and pressing a plain doorbell button at the side with one finger, tablet under the other arm, friendly expectant smile, side three-quarter view"
+ },
+ {
+  "name": "mahtab-chair",
+  "ref": "mahtab",
+  "pose": "sitting on a simple wooden chair, hands resting on her knees, kind attentive smile, medical bag on the floor beside her"
+ },
+ {
+  "name": "ebrahim-pharmacy-bag",
+  "ref": "ebrahim",
+  "pose": "carrying a plain white paper pharmacy bag in one hand, tablet under the other arm, friendly smile, no text on the bag"
+ },
+ {
+  "name": "khonejan-proud",
+  "ref": "khonejan",
+  "pose": "proud and confident, chest out, gloved hands on its hips, big smile, heart balloon"
+ },
+ {
+  "name": "khonejan-sleepy-night",
+  "ref": "khonejan",
+  "pose": "sleepy at night, half-closed window-eyes glowing warm yellow, yawning with door slightly open, one gloved hand rubbing an eye, no balloon"
+ },
+ {
+  "name": "mahtab-checklist-point",
+  "ref": "mahtab",
+  "pose": "pointing with one finger at a blank clipboard checklist held in the other hand, friendly smile, no text on the sheet"
  }
 ]

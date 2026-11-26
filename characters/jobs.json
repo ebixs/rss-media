@@ -272,5 +272,44 @@
   "seeds": [
    131
   ]
+ },
+ {
+  "id": "pose-mahtab-laugh",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, laughing happily with eyes crinkled, one hand near her chest, no bag. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/mahtab.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   691
+  ],
+  "cut": "mahtab-laugh"
+ },
+ {
+  "id": "pose-ebrahim-relieved",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, relieved, hand on chest, exhaling with a gentle smile, tablet under his arm. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/ebrahim.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   587
+  ],
+  "cut": "ebrahim-relieved"
+ },
+ {
+  "id": "pose-khonejan-shy",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, shy, looking down with rosy cheeks, one gloved hand behind its head, no balloon. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/khonejan.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   949
+  ],
+  "cut": "khonejan-shy"
  }
 ]
