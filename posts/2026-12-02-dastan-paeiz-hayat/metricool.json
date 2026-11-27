@@ -1,0 +1,6 @@
+{"post_id": 443810247, "uuid": "6071320143291305022", "scheduled_for": "2026-12-02T18:00:00+03:30", "format": "story", "episode": 1,
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/e29a1652fd5608a94a1f81cca4f1af61e5c908fd/posts/2026-12-02-dastan-paeiz-hayat/reel.mp4",
+ "experiment": "format: cinematic story vs dialogue reels",
+ "review": {"hookscore": 80.1, "caption_lint": "READY", "human_score": 65.4, "medical_review": "passed", "images_or_frames": "6-frame sheet + morph strip; morph shortened to 0.9 s to reduce ghosting"},
+ "telegram": "queued in rss-marketing as queue/2026-12-02T1430Z_dastan-paeiz-hayat.md",
+ "result": "pending"}
