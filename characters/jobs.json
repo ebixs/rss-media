@@ -350,5 +350,42 @@
   "seeds": [
    512
   ]
+ },
+ {
+  "id": "st1-s2b-grandma-look",
+  "prompt": "Edit image 0 only as described; keep exactly the same painterly style, framing, camera angle, set, lighting, colours, faces and clothes; natural hands with five fingers; no text. The grandmother has lowered the paper to her lap and turned her head toward the window with a gentle hopeful look, as if she just heard a knock.",
+  "refs": [
+   "characters/out/st1-s2-grandma-512.jpg"
+  ],
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   512
+  ]
+ },
+ {
+  "id": "st1-s3b-knock",
+  "prompt": "Edit image 0 only as described; keep exactly the same painterly style, framing, camera angle, set, lighting, colours, faces and clothes; natural hands with five fingers; no text. The nurse's raised hand now holds the metal door knocker, lifting it to knock, she smiles warmly.",
+  "refs": [
+   "characters/out/st1-s3-nurse-door-512.jpg"
+  ],
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   512
+  ]
+ },
+ {
+  "id": "st1-s4-greet",
+  "prompt": "The nurse from image 0 and the grandmother from image 1, same faces, same scarves and clothes, same painterly style. Cinematic 2.5D painterly animated film still, warm golden-hour autumn light, film grain, vertical 9:16, natural hands with five fingers, no text. The old carved wooden courtyard door is now open; the grandmother stands in the doorway smiling warmly and welcoming the nurse, who stands on the brick step holding her navy medical bag and smiling back, fallen orange leaves, pomegranate tree branch at the edge, medium shot of both, side view",
+  "refs": [
+   "characters/out/st1-s3-nurse-door-512.jpg",
+   "characters/out/st1-s2-grandma-512.jpg"
+  ],
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   512
+  ]
  }
 ]
