@@ -221,6 +221,10 @@ def process(post_dir: pathlib.Path) -> dict:
     meta = read_header(post_dir / "post.md")
     if meta.get("format", "").strip() == "dialogue":
         return process_dialogue(post_dir)
+    if meta.get("format", "").strip() in ("concept", "story"):
+        # built ahead of time (reel_concept.py / story engine); nothing to generate here
+        return {"ok": (post_dir / "reel.mp4").exists(), "format": meta["format"].strip(), "engine": "prebuilt",
+                "candidates": ["reel.mp4", "cover.jpg"]}
     prompt = meta.get("image_prompt", "").strip()
     if not prompt:
         return {"ok": False, "error": "image_prompt is missing in post.md"}
