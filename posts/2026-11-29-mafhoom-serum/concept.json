@@ -1,0 +1,20 @@
+{
+ "total": 28.5, "end_at": 25.0, "seed": 11,
+ "images": {"chamber": "characters/out/concept-serum-chamber-131.jpg", "set": "characters/out/concept-serum-set-262.jpg"},
+ "anchors": {"chamber": {"tip": [0.49, 0.30], "surface": 0.522}},
+ "beats": [
+  {"kind": "hero", "start": 0, "end": 3.4, "image": "chamber", "drops": 0.32,
+   "text": "سرم رو تند کنیم که زودتر تموم بشه؟"},
+  {"kind": "focus", "start": 3.4, "end": 8.2, "image": "set", "ring": [0.49, 0.425, 0.085], "label": "قطره‌چکان",
+   "big": "نه.", "text": "تعداد قطره‌ها در دقیقه همون سرعت سرمه، و این رو پزشک تعیین می‌کنه."},
+  {"kind": "compare", "start": 8.2, "end": 15.6, "image": "chamber",
+   "right": {"label": "سرعت نسخه", "ok": true, "drops": 1.5},
+   "left": {"label": "تند", "ok": false, "drops": 0.3},
+   "text": "مایعِ زیاد و سریع ممکنه در بدن جمع بشه و نفس رو تنگ کنه؛ به‌خصوص در سالمند و بیمار قلبی یا کلیوی."},
+  {"kind": "checklist", "start": 15.6, "end": 22.0, "title": "به پرستار بگید اگه:", "step": 1.5,
+   "items": ["قطره‌ها ایستاد یا تند شد", "محل رگ ورم، درد یا سوزش داره"],
+   "alarm": "تنگی نفس؟ همون لحظه با ۱۱۵ تماس بگیرید"},
+  {"kind": "takeaway", "start": 22.0, "end": 25.0, "text": "سرعت سرم دستور پزشکه، نه عجلهٔ ما."}
+ ],
+ "end": {"tag": "پرستار در منزل", "phone": "۰۹۱۹۰۴۲۳۴۰۰"}
+}
