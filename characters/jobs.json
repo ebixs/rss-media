@@ -311,5 +311,44 @@
    949
   ],
   "cut": "khonejan-shy"
+ },
+ {
+  "id": "st1-s1-courtyard",
+  "prompt": "Cinematic 2.5D painterly animated film still, hand-painted textures, soft brush strokes, warm golden-hour light with soft teal shadows, film grain, shallow depth of field, vertical 9:16 composition, natural hands with five fingers, no text, no letters, no logo, no signage. Establishing shot of a traditional Iranian courtyard house in autumn at golden hour: a small turquoise-tiled pool in the middle, a pomegranate tree with orange and red leaves, fallen leaves on old brick paving, wooden doors and arched windows with warm light inside, nobody in the frame, calm and nostalgic",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   512
+  ]
+ },
+ {
+  "id": "st1-s2-grandma",
+  "prompt": "Cinematic 2.5D painterly animated film still, hand-painted textures, soft brush strokes, warm golden-hour light with soft teal shadows, film grain, shallow depth of field, vertical 9:16 composition, natural hands with five fingers, no text, no letters, no logo, no signage. Inside a cosy old Iranian room by an arched window with autumn light, an elderly Iranian grandmother with a soft white floral scarf loosely draped, sitting on a cushion holding a doctor's prescription sheet (blank paper, no readable writing) in both hands, looking at it with a slightly worried expression, a small table with a glass of tea beside her, medium shot, subject in the upper two thirds",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   512
+  ]
+ },
+ {
+  "id": "st1-s3-nurse-door",
+  "prompt": "The nurse from image 0, same face, scarf and navy uniform, same painterly style. Cinematic 2.5D painterly animated film still, hand-painted textures, soft brush strokes, warm golden-hour light with soft teal shadows, film grain, shallow depth of field, vertical 9:16 composition, natural hands with five fingers, no text, no letters, no logo, no signage. She stands outside an old carved wooden courtyard door of a traditional Iranian house at golden hour in autumn, holding her navy medical bag, her free hand raised toward the metal door knocker, fallen leaves on the brick step, warm hopeful mood, three-quarter view, full body",
+  "refs": [
+   "characters/out/style-story-a-painterly-421.jpg"
+  ],
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   512
+  ]
+ },
+ {
+  "id": "st1-s5-tray",
+  "prompt": "Cinematic 2.5D painterly animated film still, hand-painted textures, soft brush strokes, warm golden-hour light with soft teal shadows, film grain, shallow depth of field, vertical 9:16 composition, natural hands with five fingers, no text, no letters, no logo, no signage. Close-up of a wooden tray on a Persian carpet by a window in warm afternoon light: two clear tulip-shaped tea glasses with amber tea and light steam, a folded doctor's prescription sheet with no readable writing, and a few small plain medicine boxes with no labels neatly placed side by side, cosy and calm, top-down three-quarter angle",
+  "width": 768,
+  "height": 1344,
+  "seeds": [
+   512
+  ]
  }
 ]
