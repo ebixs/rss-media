@@ -1,0 +1,5 @@
+{"post_id": 443803446, "uuid": "2381745508480206085", "scheduled_for": "2026-11-29T18:00:00+03:30", "format": "concept", "episode": 1,
+ "media_url": "https://raw.githubusercontent.com/ebixs/rss-media/b652b1f212bf13c264d3554240324737ec0a06f0/posts/2026-11-29-mafhoom-serum/reel.mp4",
+ "experiment": "format: concept explainer vs dialogue reels",
+ "review": {"hookscore": 50.5, "caption_lint": "READY (WARN: 2 asks — share + emergency 115, kept for safety)", "human_score": 74.1, "medical_review": "passed", "images_or_frames": "6-frame contact sheet + drop-motion strip checked; clamp close-up rejected as inaccurate"},
+ "result": "pending"}
