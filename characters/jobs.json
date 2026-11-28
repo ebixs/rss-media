@@ -403,14 +403,14 @@
  },
  {
   "id": "pose-ebrahim-doorbell",
-  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, standing and pressing a plain doorbell button at the side with one finger, tablet under the other arm, friendly expectant smile, side three-quarter view. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, side three-quarter view, his right arm stretched out in front of him with the index finger pressing a small round white doorbell button on a plain pale wall panel at the edge of the frame, left hand holding a tablet at his side, friendly expectant smile. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
   "refs": [
    "characters/ref/ebrahim.jpg"
   ],
   "width": 1024,
   "height": 1024,
   "seeds": [
-   496
+   611
   ],
   "cut": "ebrahim-doorbell"
  },
