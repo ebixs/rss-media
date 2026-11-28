@@ -35,6 +35,9 @@ Rules: no text in images; never a real patient; medical scenes stay safe (no nee
 - mahtab-laugh: laughing happily with eyes crinkled, one hand on her chest, no bag (reaction / joke scenes)
 - ebrahim-relieved: eyes closed, gentle smile, hand on chest, exhaling (relief scenes; slight jagged edge at the cut-out sides)
 - khonejan-shy: shy half-closed window-eyes, rosy cheeks, one gloved hand behind its head, no balloon (shy / modest scenes)
+- mahtab-sorry: apologetic, one palm raised, gentle regretful smile, no bag (apology / delay scenes)
+- ebrahim-doorbell: side view pressing a round doorbell button on a wall panel (button stays in the cut-out), tablet at his side (arrival scenes)
+- khonejan-proud: proud grin, heart balloon, stethoscope on the side (hands are not exactly on its hips) (proud / confident scenes)
 
 Older versions of replaced cut-outs live in characters/cut/archive (not used by the reels).
 Quality notes per run: characters/quality-log.md.
