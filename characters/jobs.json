@@ -387,5 +387,44 @@
   "seeds": [
    512
   ]
+ },
+ {
+  "id": "pose-mahtab-sorry",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, apologetic and sorry, one hand slightly raised palm-out, gentle regretful smile, eyebrows slightly raised, no bag. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/mahtab.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   309
+  ],
+  "cut": "mahtab-sorry"
+ },
+ {
+  "id": "pose-ebrahim-doorbell",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, standing and pressing a plain doorbell button at the side with one finger, tablet under the other arm, friendly expectant smile, side three-quarter view. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/ebrahim.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   496
+  ],
+  "cut": "ebrahim-doorbell"
+ },
+ {
+  "id": "pose-khonejan-proud",
+  "prompt": "The character from image 0, exactly the same character, face, proportions, outfit and colours as in image 0, full body, proud and confident, chest out, gloved hands on its hips, big smile, heart balloon. High-quality 3D animated feature film style, soft global illumination, gentle rim light, centered, standing on a plain soft ivory-to-mint studio background with a soft floor shadow, nothing else in the frame, no text, no letters, no logo",
+  "refs": [
+   "characters/ref/khonejan.jpg"
+  ],
+  "width": 1024,
+  "height": 1024,
+  "seeds": [
+   708
+  ],
+  "cut": "khonejan-proud"
  }
 ]
